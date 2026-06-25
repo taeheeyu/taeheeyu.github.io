@@ -7,6 +7,7 @@ plugins:   [jekyll-sitemap, jekyll-feed,  jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 
-title:		   "Portfolio Jekyll Theme"
+title:        "자기소개"
 description: "Powered by Jekyll and GitHub Pages"
-author:      "Paul Le"
+author:      "유태희"
+email:       "taeheeyu@gmail.com"
