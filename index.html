@@ -155,7 +155,11 @@
             header p { font-size: 1.5rem; }
             .container { flex-direction: column; align-items: center; }
             .side-area, .center-area { width: 80%; }
-            .center-area { order: 2; }
+            
+            /* 모바일 화면에서 카드 노출 순서 조정: 프로필(1) -> 왼쪽 그림(2) -> 오른쪽 그림(3) */
+            .center-card { order: 1; }
+            .left-card { order: 2; }
+            .right-card { order: 3; }
             
             .image-card:hover {
                 transform: translateY(-5px);
@@ -181,17 +185,17 @@
 
     <div class="container">
         
-        <a href="left-detail.html" class="side-area image-card">
+        <a href="left-detail.html" class="side-area left-card image-card">
             <img src="images/left-drawings.png" alt="왼쪽 손그림">
             <span class="hover-label">🍞 제과제빵 & 기술</span>
         </a>
 
-        <a href="center-detail.html" class="center-area image-card">
+        <a href="center-detail.html" class="center-area center-card image-card">
             <img src="images/center-student.png" alt="학생 사진">
             <span class="hover-label">✨ 프로필</span>
         </a>
 
-        <a href="right-detail.html" class="side-area image-card">
+        <a href="right-detail.html" class="side-area right-card image-card">
             <img src="images/right-drawings.png" alt="오른쪽 손그림">
             <span class="hover-label">💖 좋아하는 것들</span>
         </a>
