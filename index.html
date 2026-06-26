@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기소개 - 유태희</title>
+    <!-- Google Fonts Noto Sans KR 로드 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        /* 기본 스타일 초기화: 배경은 깨끗한 흰색, 글자는 검정 */
+        /* 기본 스타일 초기화 */
         body {
             margin: 0;
             padding: 0;
             background-color: #ffffff;
-            color: #000000;
+            color: #111111;
             font-family: 'Noto Sans KR', sans-serif;
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            /* 부드러운 페이지 진입 페이드인 애니메이션 */
+            animation: pageFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* 상단 헤더 영역: 이름과 장래희망 */
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 상단 헤더 영역 */
         header {
             text-align: center;
             margin-top: 50px;
@@ -38,25 +55,35 @@
             font-size: 2rem;
             margin: 10px 0 0 0;
             font-weight: 400;
-            color: #333333;
+            color: #555555;
         }
 
-        /* 메인 콘텐츠 영역: 3단 레이아웃 (왼쪽 그림 - 가운데 인물 - 오른쪽 그림) */
+        /* 메인 콘텐츠 영역: 3단 레이아웃 */
         .container {
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* 인물과 그림이 바닥(아래쪽)을 향하도록 정렬 */
+            align-items: flex-end;
             width: 100%;
             max-width: 1200px;
             flex-grow: 1;
             position: relative;
-            padding-bottom: 40px; /* 화면 하단과 약간의 여백 */
+            padding-bottom: 40px;
         }
 
-        /* 각 섹션별 너비 지정 */
+        /* 이미지 링크 공통 스타일 */
+        .image-card {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+
         .side-area {
             width: 30%;
-            display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -64,33 +91,84 @@
 
         .center-area {
             width: 40%;
-            display: flex;
             justify-content: center;
             align-items: flex-end;
             position: relative;
         }
 
-        /* 이미지 반응형 스타일 설정 */
-        .side-area img {
+        /* 이미지 스타일 및 부드러운 전환 */
+        .image-card img {
             width: 100%;
-            max-height: 70vh;
             object-fit: contain;
+            transition: filter 0.4s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .side-area img {
+            max-height: 70vh;
         }
 
         .center-area img {
-            width: 100%;
-            max-height: 75vh; /* 화면 중앙과 살짝 아래에 꽉 차도록 설정 */
-            object-fit: contain;
+            max-height: 75vh;
             display: block;
         }
 
-        /* 반응형 모바일 대응: 화면이 작아지면 세로로 정렬 */
+        /* 마우스 호버 효과: 카드 공중 부양 및 이미지 스케일 */
+        .image-card:hover {
+            transform: translateY(-12px);
+        }
+
+        .image-card:hover img {
+            transform: scale(1.02);
+            filter: brightness(0.95);
+        }
+
+        /* 호버 시 은은하게 나타나는 툴팁 라벨 */
+        .hover-label {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background-color: rgba(17, 17, 17, 0.95);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+            pointer-events: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .image-card:hover .hover-label {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* 반응형 모바일 대응 */
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
             header p { font-size: 1.5rem; }
             .container { flex-direction: column; align-items: center; }
             .side-area, .center-area { width: 80%; }
-            .center-area { order: 2; } /* 모바일에서는 인물이 가운데(순서상 아래)로 오게 조절 */
+            .center-area { order: 2; }
+            
+            .image-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            .hover-label {
+                bottom: 20px;
+                opacity: 0.9;
+                visibility: visible;
+                transform: translateX(-50%) translateY(0);
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
@@ -103,17 +181,20 @@
 
     <div class="container">
         
-        <div class="side-area">
+        <a href="left-detail.html" class="side-area image-card">
             <img src="images/left-drawings.png" alt="왼쪽 손그림">
-        </div>
+            <span class="hover-label">🍞 제과제빵 & 기술</span>
+        </a>
 
-        <div class="center-area">
+        <a href="center-detail.html" class="center-area image-card">
             <img src="images/center-student.png" alt="학생 사진">
-        </div>
+            <span class="hover-label">✨ 프로필</span>
+        </a>
 
-        <div class="side-area">
+        <a href="right-detail.html" class="side-area image-card">
             <img src="images/right-drawings.png" alt="오른쪽 손그림">
-        </div>
+            <span class="hover-label">💖 좋아하는 것들</span>
+        </a>
 
     </div>
 
