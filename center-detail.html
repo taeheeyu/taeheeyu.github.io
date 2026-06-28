@@ -66,7 +66,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 60px;
+            gap: 40px; /* 간격을 좁혀 공간 확보 */
             width: 100%;
             max-width: 1100px;
             flex-grow: 1;
@@ -76,7 +76,7 @@
 
         /* 이미지 영역 */
         .image-section {
-            width: 45%;
+            width: 50%; /* 가로 비중을 50%로 늘려 이미지 공간을 크게 확보 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -85,7 +85,7 @@
 
         .image-section img {
             width: 100%;
-            max-height: 65vh;
+            max-height: 80vh; /* 세로 크기 제한을 80vh로 대폭 늘려 빨간선 크기만큼 확대 */
             object-fit: contain;
             filter: drop-shadow(0 10px 30px rgba(0,0,0,0.05));
         }
@@ -183,7 +183,7 @@
                 width: 100%;
             }
             .image-section img {
-                max-height: 45vh;
+                max-height: 55vh; /* 모바일에서도 더 크게 보이도록 조정 */
             }
             .info-section h1 {
                 font-size: 2rem;

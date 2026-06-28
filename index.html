@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기소개 - 유태희</title>
-    <!-- Google Fonts Noto Sans KR 로드 -->
+    <!-- Google Fonts Noto Sans KR 및 Nanum Pen Script 로드 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         /* 기본 스타일 초기화 */
         body {
@@ -39,23 +39,26 @@
         /* 상단 헤더 영역 */
         header {
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 20px;
+            margin-top: 40px;
+            margin-bottom: 10px;
             z-index: 10;
         }
 
         header h1 {
-            font-size: 3.5rem;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 5rem;
             margin: 0;
-            font-weight: 800;
-            letter-spacing: 2px;
+            font-weight: 700;
+            color: #2e7d32; /* 손글씨 느낌의 녹색으로 지정 */
+            letter-spacing: 1px;
         }
 
         header p {
-            font-size: 2rem;
-            margin: 10px 0 0 0;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 3rem;
+            margin: -8px 0 0 0;
             font-weight: 400;
-            color: #555555;
+            color: #689f38;
         }
 
         /* 메인 콘텐츠 영역: 3단 레이아웃 */
@@ -68,6 +71,7 @@
             flex-grow: 1;
             position: relative;
             padding-bottom: 40px;
+            gap: 20px; /* 카드를 최대한 가깝게 밀착시킴 */
         }
 
         /* 이미지 링크 공통 스타일 */
@@ -83,17 +87,21 @@
         }
 
         .side-area {
-            width: 30%;
+            width: 14%; /* 좌우 카드를 매우 작게 설정하여 중앙 강조 */
+            max-width: 160px;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 5px;
+            box-sizing: border-box;
         }
 
         .center-area {
-            width: 40%;
+            width: 52%; /* 중앙 프로필 카드를 대폭 확장 */
+            max-width: 560px;
             justify-content: center;
             align-items: flex-end;
             position: relative;
+            box-sizing: border-box;
         }
 
         /* 이미지 스타일 및 부드러운 전환 */
@@ -104,11 +112,11 @@
         }
 
         .side-area img {
-            max-height: 70vh;
+            max-height: 30vh; /* 좌우 드로잉 이미지를 30vh로 줄여서 보조 데코레이션처럼 만듦 */
         }
 
         .center-area img {
-            max-height: 75vh;
+            max-height: 85vh; /* 중앙 프로필 사진이 화면을 크게 차지하도록 최대로 키움 */
             display: block;
         }
 
@@ -130,9 +138,10 @@
             transform: translateX(-50%) translateY(10px);
             background-color: rgba(17, 17, 17, 0.95);
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 8px 18px;
             border-radius: 30px;
-            font-size: 0.95rem;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 1.5rem;
             font-weight: 500;
             opacity: 0;
             visibility: hidden;
@@ -153,8 +162,13 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
             header p { font-size: 1.5rem; }
-            .container { flex-direction: column; align-items: center; }
-            .side-area, .center-area { width: 80%; }
+            .container { 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 15px; /* 카드간 세로 간격 조정 */
+            }
+            .side-area { width: 35%; max-width: 150px; } /* 모바일에서도 서브 이미지는 작게 */
+            .center-area { width: 85%; max-width: 380px; } /* 중앙 프로필은 모바일 화면에서도 크고 웅장하게 */
             
             /* 모바일 화면에서 카드 노출 순서 조정: 프로필(1) -> 왼쪽 그림(2) -> 오른쪽 그림(3) */
             .center-card { order: 1; }
