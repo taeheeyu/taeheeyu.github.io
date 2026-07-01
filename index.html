@@ -45,6 +45,15 @@
             z-index: 10;
         }
 
+        .header-image {
+            height: 130px;
+            max-height: 18vh;
+            width: auto;
+            max-width: 95%;
+            object-fit: contain;
+            display: inline-block;
+        }
+
         header h1 {
             font-family: 'Nanum Pen Script', cursive;
             font-size: 3.8rem;
@@ -95,6 +104,15 @@
             align-items: center;
             padding: 5px;
             box-sizing: border-box;
+            margin-bottom: 34vh; /* 상반신/어깨 높이 근처로 끌어올림 */
+        }
+
+        .left-card {
+            margin-right: -45px; /* 중앙 사진과 가깝게 밀착시킴 */
+        }
+
+        .right-card {
+            margin-left: -45px; /* 중앙 사진과 가깝게 밀착시킴 */
         }
 
         .center-area {
@@ -173,13 +191,22 @@
             }
             header h1 { font-size: 2.5rem; }
             header p { font-size: 1.5rem; }
+            .header-image {
+                height: 90px;
+                max-height: 15vh;
+                width: auto;
+            }
             .container { 
                 flex-direction: column; 
                 align-items: center; 
                 gap: 15px; /* 카드간 세로 간격 조정 */
                 padding-bottom: 40px;
             }
-            .side-area { width: 55%; max-width: 220px; } /* 모바일에서 좌우 드로잉 카드 크기를 확대 */
+            .side-area { 
+                width: 55%; 
+                max-width: 220px; 
+                margin-bottom: 0; /* 모바일에서 하단 마진 제거 */
+            } 
             .center-area { width: 80%; max-width: 320px; } /* 중앙 프로필 카드는 모바일 비율에 맞춰 적절히 축소 */
             
             .side-area img {
@@ -191,8 +218,14 @@
             
             /* 모바일 화면에서 카드 노출 순서 조정: 프로필(1) -> 왼쪽 그림(2) -> 오른쪽 그림(3) */
             .center-card { order: 1; }
-            .left-card { order: 2; }
-            .right-card { order: 3; }
+            .left-card { 
+                order: 2; 
+                margin-right: 0; /* 모바일에서 마진 제거 */
+            }
+            .right-card { 
+                order: 3; 
+                margin-left: 0; /* 모바일에서 마진 제거 */
+            }
             
             .image-card:hover {
                 transform: translateY(-5px);
@@ -212,8 +245,7 @@
 <body>
 
     <header>
-        <h1>김정림</h1>
-        <p>댄스가수</p>
+        <img src="images/20104_center name_bold.jpg" alt="김정림 댄스가수" class="header-image">
     </header>
 
     <div class="container">
