@@ -98,30 +98,42 @@
         }
 
         .side-area {
-            width: 14%; /* 좌우 카드를 매우 작게 설정하여 중앙 강조 */
-            max-width: 160px;
+            width: 12%; /* 5개 카드 배치를 위해 약간 축소 */
+            max-width: 130px;
             justify-content: center;
             align-items: center;
             padding: 5px;
             box-sizing: border-box;
-            margin-bottom: 34vh; /* 상반신/어깨 높이 근처로 끌어올림 */
         }
 
         .left-card {
-            margin-right: -45px; /* 중앙 사진과 가깝게 밀착시킴 */
+            margin-right: -30px; /* 카드를 살짝 겹쳐 빈티지 콜라주 연출 */
+            margin-bottom: 15vh; /* 엇갈린 높이 배치 */
+        }
+
+        .friend-card {
+            margin-right: -55px; /* 중앙 사진과 겹치도록 배치 */
+            margin-bottom: 34vh; /* 엇갈린 높이 배치 */
+        }
+
+        .teacher-card {
+            margin-left: -55px; /* 중앙 사진과 겹치도록 배치 */
+            margin-bottom: 34vh; /* 엇갈린 높이 배치 */
         }
 
         .right-card {
-            margin-left: -45px; /* 중앙 사진과 가깝게 밀착시킴 */
+            margin-left: -30px; /* 카드를 살짝 겹쳐 빈티지 콜라주 연출 */
+            margin-bottom: 15vh; /* 엇갈린 높이 배치 */
         }
 
         .center-area {
-            width: 52%; /* 중앙 프로필 카드를 대폭 확장 */
-            max-width: 560px;
+            width: 36%; /* 5단 배치를 위해 가로폭 최적화 */
+            max-width: 400px;
             justify-content: center;
             align-items: flex-end;
             position: relative;
             box-sizing: border-box;
+            z-index: 5;
         }
 
         /* 이미지 스타일 및 부드러운 전환 */
@@ -143,6 +155,7 @@
         /* 마우스 호버 효과: 카드 공중 부양 및 이미지 스케일 */
         .image-card:hover {
             transform: translateY(-12px);
+            z-index: 15; /* 호버 시 앞으로 배치 */
         }
 
         .image-card:hover img {
@@ -170,6 +183,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             white-space: nowrap;
             letter-spacing: 0.5px;
+            z-index: 20; /* 툴팁이 가려지지 않도록 최상단 고정 */
         }
 
         .image-card:hover .hover-label {
@@ -205,7 +219,7 @@
             .side-area { 
                 width: 55%; 
                 max-width: 220px; 
-                margin-bottom: 0; /* 모바일에서 하단 마진 제거 */
+                margin-bottom: 0 !important; /* 모바일에서 하단 마진 제거 */
             } 
             .center-area { width: 80%; max-width: 320px; } /* 중앙 프로필 카드는 모바일 비율에 맞춰 적절히 축소 */
             
@@ -216,15 +230,23 @@
                 max-height: none; /* 모바일에서는 높이 제한을 해제하여 가로 너비에 맞게 조절 */
             }
             
-            /* 모바일 화면에서 카드 노출 순서 조정: 프로필(1) -> 왼쪽 그림(2) -> 오른쪽 그림(3) */
+            /* 모바일 화면에서 카드 노출 순서 조정 */
             .center-card { order: 1; }
             .left-card { 
                 order: 2; 
-                margin-right: 0; /* 모바일에서 마진 제거 */
+                margin-right: 0 !important; /* 모바일에서 마진 제거 */
+            }
+            .friend-card { 
+                order: 3; 
+                margin-right: 0 !important; /* 모바일에서 마진 제거 */
             }
             .right-card { 
-                order: 3; 
-                margin-left: 0; /* 모바일에서 마진 제거 */
+                order: 4; 
+                margin-left: 0 !important; /* 모바일에서 마진 제거 */
+            }
+            .teacher-card { 
+                order: 5; 
+                margin-left: 0 !important; /* 모바일에서 마진 제거 */
             }
             
             .image-card:hover {
@@ -255,9 +277,21 @@
             <span class="hover-label">🍞 제과제빵 & 기술</span>
         </a>
 
+        <!-- 추가 손그림 1: 친한 친구 -->
+        <a href="friend-detail.html" class="side-area friend-card image-card">
+            <img src="images/20104_drawing 1.png" alt="친한 친구 손그림">
+            <span class="hover-label">🏫 친한 친구, 살짝 좋아할지도?</span>
+        </a>
+
         <a href="center-detail.html" class="center-area center-card image-card">
             <img src="images/center-student.png" alt="학생 사진">
             <span class="hover-label">✨ 프로필</span>
+        </a>
+
+        <!-- 추가 손그림 2: 좋아하는 선생님 -->
+        <a href="teacher-detail.html" class="side-area teacher-card image-card">
+            <img src="images/20104_drawing 2.png" alt="좋아하는 선생님 손그림">
+            <span class="hover-label">👩‍🏫 좋아하는 선생님</span>
         </a>
 
         <a href="right-detail.html" class="side-area right-card image-card">
