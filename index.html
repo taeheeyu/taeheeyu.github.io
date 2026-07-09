@@ -81,7 +81,7 @@
             flex-grow: 1;
             position: relative;
             padding-bottom: 2vh;
-            gap: 20px; /* 카드를 최대한 가깝게 밀착시킴 */
+            gap: 8px; /* 가로 간격 축소 */
             box-sizing: border-box;
         }
 
@@ -97,38 +97,38 @@
             cursor: pointer;
         }
 
+        .side-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 세로 중앙 정렬로 위아래 간격 좁힘 */
+            align-items: center;
+            height: 75vh; /* 중앙 프로필 최대 높이와 맞춤 */
+            width: 15%; /* 데스크탑 적절 너비 */
+            max-width: 150px;
+            box-sizing: border-box;
+            z-index: 6;
+            gap: 15px; /* 세로 그림들 간격 최소화 */
+        }
+
+        .left-column {
+            margin-right: -55px; /* 음수 마진을 더 키워 중앙 이미지와 가깝게 모음 */
+        }
+
+        .right-column {
+            margin-left: -55px; /* 음수 마진을 더 키워 중앙 이미지와 가깝게 모음 */
+        }
+
         .side-area {
-            width: 12%; /* 5개 카드 배치를 위해 약간 축소 */
-            max-width: 130px;
+            width: 100%; /* 부모 컬럼 너비에 가득 채움 */
             justify-content: center;
             align-items: center;
             padding: 5px;
             box-sizing: border-box;
         }
 
-        .left-card {
-            margin-right: -30px; /* 카드를 살짝 겹쳐 빈티지 콜라주 연출 */
-            margin-bottom: 15vh; /* 엇갈린 높이 배치 */
-        }
-
-        .friend-card {
-            margin-right: -55px; /* 중앙 사진과 겹치도록 배치 */
-            margin-bottom: 34vh; /* 엇갈린 높이 배치 */
-        }
-
-        .teacher-card {
-            margin-left: -55px; /* 중앙 사진과 겹치도록 배치 */
-            margin-bottom: 34vh; /* 엇갈린 높이 배치 */
-        }
-
-        .right-card {
-            margin-left: -30px; /* 카드를 살짝 겹쳐 빈티지 콜라주 연출 */
-            margin-bottom: 15vh; /* 엇갈린 높이 배치 */
-        }
-
         .center-area {
-            width: 36%; /* 5단 배치를 위해 가로폭 최적화 */
-            max-width: 400px;
+            width: 46%; /* 중앙 프로필 영역 폭 확장 */
+            max-width: 500px;
             justify-content: center;
             align-items: flex-end;
             position: relative;
@@ -216,6 +216,9 @@
                 gap: 15px; /* 카드간 세로 간격 조정 */
                 padding-bottom: 40px;
             }
+            .side-column {
+                display: contents; /* 모바일에서는 레이아웃 박스를 제거해 flex 흐름 유지 */
+            }
             .side-area { 
                 width: 55%; 
                 max-width: 220px; 
@@ -272,32 +275,38 @@
 
     <div class="container">
         
-        <a href="left-detail.html" class="side-area left-card image-card">
-            <img src="images/left-drawings.png" alt="왼쪽 손그림">
-            <span class="hover-label">🍞 제과제빵 & 기술</span>
-        </a>
+        <!-- 왼쪽 세로 열: 제과제빵 & 친한 친구 -->
+        <div class="side-column left-column">
+            <a href="left-detail.html" class="side-area left-card image-card">
+                <img src="images/left-drawings.png" alt="왼쪽 손그림">
+                <span class="hover-label">🍞 제과제빵 & 기술</span>
+            </a>
 
-        <!-- 추가 손그림 1: 친한 친구 -->
-        <a href="friend-detail.html" class="side-area friend-card image-card">
-            <img src="images/20104_drawing 1.png" alt="친한 친구 손그림">
-            <span class="hover-label">🏫 친한 친구, 살짝 좋아할지도?</span>
-        </a>
+            <!-- 추가 손그림 1: 친한 친구 -->
+            <a href="friend-detail.html" class="side-area friend-card image-card">
+                <img src="images/20104_drawing 1.png" alt="친한 친구 손그림">
+                <span class="hover-label">🏫 친한 친구, 살짝 좋아할지도?</span>
+            </a>
+        </div>
 
         <a href="center-detail.html" class="center-area center-card image-card">
             <img src="images/center-student.png" alt="학생 사진">
             <span class="hover-label">✨ 프로필</span>
         </a>
 
-        <!-- 추가 손그림 2: 좋아하는 선생님 -->
-        <a href="teacher-detail.html" class="side-area teacher-card image-card">
-            <img src="images/20104_drawing 2.png" alt="좋아하는 선생님 손그림">
-            <span class="hover-label">👩‍🏫 좋아하는 선생님</span>
-        </a>
+        <!-- 오른쪽 세로 열: 좋아하는 선생님 & 좋아하는 것들 -->
+        <div class="side-column right-column">
+            <!-- 추가 손그림 2: 좋아하는 선생님 -->
+            <a href="teacher-detail.html" class="side-area teacher-card image-card">
+                <img src="images/20104_drawing 2.png" alt="좋아하는 선생님 손그림">
+                <span class="hover-label">👩‍🏫 좋아하는 선생님</span>
+            </a>
 
-        <a href="right-detail.html" class="side-area right-card image-card">
-            <img src="images/right-drawings.png" alt="오른쪽 손그림">
-            <span class="hover-label">💖 좋아하는 것들</span>
-        </a>
+            <a href="right-detail.html" class="side-area right-card image-card">
+                <img src="images/right-drawings.png" alt="오른쪽 손그림">
+                <span class="hover-label">💖 좋아하는 것들</span>
+            </a>
+        </div>
 
     </div>
 
