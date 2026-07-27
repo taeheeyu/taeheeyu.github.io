@@ -1,314 +1,100 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자기소개 - 유태희</title>
-    <!-- Google Fonts Noto Sans KR 및 Nanum Pen Script 로드 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* 기본 스타일 초기화 */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #111111;
-            font-family: 'Noto Sans KR', sans-serif;
-            overflow: hidden; /* 데스크탑에서 스크롤바가 생기지 않도록 설정 */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh; /* 화면 크기에 맞게 딱 맞춤 */
-            box-sizing: border-box;
-            /* 부드러운 페이지 진입 페이드인 애니메이션 */
-            animation: pageFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        @keyframes pageFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 상단 헤더 영역 */
-        header {
-            text-align: center;
-            margin-top: 2vh;
-            margin-bottom: 0.5vh;
-            z-index: 10;
-        }
-
-        .header-image {
-            height: 130px;
-            max-height: 18vh;
-            width: auto;
-            max-width: 95%;
-            object-fit: contain;
-            display: inline-block;
-        }
-
-        header h1 {
-            font-family: 'Nanum Pen Script', cursive;
-            font-size: 3.8rem;
-            margin: 0;
-            font-weight: 700;
-            color: #2e7d32; /* 손글씨 느낌의 녹색으로 지정 */
-            letter-spacing: 1px;
-        }
-
-        header p {
-            font-family: 'Nanum Pen Script', cursive;
-            font-size: 2.2rem;
-            margin: -8px 0 0 0;
-            font-weight: 400;
-            color: #689f38;
-        }
-
-        /* 메인 콘텐츠 영역: 3단 레이아웃 */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            width: 100%;
-            max-width: 1200px;
-            flex-grow: 1;
-            position: relative;
-            padding-bottom: 2vh;
-            gap: 8px; /* 가로 간격 축소 */
-            box-sizing: border-box;
-        }
-
-        /* 이미지 링크 공통 스타일 */
-        .image-card {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            cursor: pointer;
-        }
-
-        .side-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* 세로 중앙 정렬로 위아래 간격 좁힘 */
-            align-items: center;
-            height: 75vh; /* 중앙 프로필 최대 높이와 맞춤 */
-            width: 15%; /* 데스크탑 적절 너비 */
-            max-width: 150px;
-            box-sizing: border-box;
-            z-index: 6;
-            gap: 15px; /* 세로 그림들 간격 최소화 */
-        }
-
-        .left-column {
-            margin-right: -55px; /* 음수 마진을 더 키워 중앙 이미지와 가깝게 모음 */
-        }
-
-        .right-column {
-            margin-left: -55px; /* 음수 마진을 더 키워 중앙 이미지와 가깝게 모음 */
-        }
-
-        .side-area {
-            width: 100%; /* 부모 컬럼 너비에 가득 채움 */
-            justify-content: center;
-            align-items: center;
-            padding: 5px;
-            box-sizing: border-box;
-        }
-
-        .center-area {
-            width: 46%; /* 중앙 프로필 영역 폭 확장 */
-            max-width: 500px;
-            justify-content: center;
-            align-items: flex-end;
-            position: relative;
-            box-sizing: border-box;
-            z-index: 5;
-        }
-
-        /* 이미지 스타일 및 부드러운 전환 */
-        .image-card img {
-            width: 100%;
-            object-fit: contain;
-            transition: filter 0.4s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .side-area img {
-            max-height: 25vh; /* 좌우 드로잉 이미지를 25vh로 조절 */
-        }
-
-        .center-area img {
-            max-height: 75vh; /* 중앙 프로필 사진 크기를 75vh로 대폭 키워 화면을 가득 채우도록 설정 */
-            display: block;
-        }
-
-        /* 마우스 호버 효과: 카드 공중 부양 및 이미지 스케일 */
-        .image-card:hover {
-            transform: translateY(-12px);
-            z-index: 15; /* 호버 시 앞으로 배치 */
-        }
-
-        .image-card:hover img {
-            transform: scale(1.02);
-            filter: brightness(0.95);
-        }
-
-        /* 호버 시 은은하게 나타나는 툴팁 라벨 */
-        .hover-label {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%) translateY(10px);
-            background-color: rgba(17, 17, 17, 0.95);
-            color: #ffffff;
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-family: 'Nanum Pen Script', cursive;
-            font-size: 1.5rem;
-            font-weight: 500;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
-            pointer-events: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            white-space: nowrap;
-            letter-spacing: 0.5px;
-            z-index: 20; /* 툴팁이 가려지지 않도록 최상단 고정 */
-        }
-
-        .image-card:hover .hover-label {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        /* 반응형 모바일 대응 */
-        @media (max-width: 768px) {
-            body {
-                overflow-y: auto; /* 모바일에서는 정상적으로 세로 스크롤 허용 */
-                height: auto;
-                min-height: 100vh;
-            }
-            header {
-                margin-top: 25px;
-                margin-bottom: 10px;
-            }
-            header h1 { font-size: 2.5rem; }
-            header p { font-size: 1.5rem; }
-            .header-image {
-                height: 90px;
-                max-height: 15vh;
-                width: auto;
-            }
-            .container { 
-                flex-direction: column; 
-                align-items: center; 
-                gap: 15px; /* 카드간 세로 간격 조정 */
-                padding-bottom: 40px;
-            }
-            .side-column {
-                display: contents; /* 모바일에서는 레이아웃 박스를 제거해 flex 흐름 유지 */
-            }
-            .side-area { 
-                width: 55%; 
-                max-width: 220px; 
-                margin-bottom: 0 !important; /* 모바일에서 하단 마진 제거 */
-            } 
-            .center-area { width: 80%; max-width: 320px; } /* 중앙 프로필 카드는 모바일 비율에 맞춰 적절히 축소 */
-            
-            .side-area img {
-                max-height: none; /* 모바일에서는 높이 제한을 해제하여 가로 너비에 맞게 조절 */
-            }
-            .center-area img {
-                max-height: none; /* 모바일에서는 높이 제한을 해제하여 가로 너비에 맞게 조절 */
-            }
-            
-            /* 모바일 화면에서 카드 노출 순서 조정 */
-            .center-card { order: 1; }
-            .left-card { 
-                order: 2; 
-                margin-right: 0 !important; /* 모바일에서 마진 제거 */
-            }
-            .friend-card { 
-                order: 3; 
-                margin-right: 0 !important; /* 모바일에서 마진 제거 */
-            }
-            .right-card { 
-                order: 4; 
-                margin-left: 0 !important; /* 모바일에서 마진 제거 */
-            }
-            .teacher-card { 
-                order: 5; 
-                margin-left: 0 !important; /* 모바일에서 마진 제거 */
-            }
-            
-            .image-card:hover {
-                transform: translateY(-5px);
-            }
-            
-            .hover-label {
-                bottom: 20px;
-                opacity: 0.9;
-                visibility: visible;
-                transform: translateX(-50%) translateY(0);
-                font-size: 0.85rem;
-                padding: 6px 12px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>금천고 학급 소개 | 우리 반을 소개합니다</title>
+  <meta name="description" content="금천고등학교 6명 학생들의 자기소개, 학급 교육 내용 및 다양한 활동 소식을 만나보세요.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-    <header>
-        <img src="images/20104_center name_bold.jpg" alt="김정림 댄스가수" class="header-image">
-    </header>
-
-    <div class="container">
-        
-        <!-- 왼쪽 세로 열: 제과제빵 & 친한 친구 -->
-        <div class="side-column left-column">
-            <a href="left-detail.html" class="side-area left-card image-card">
-                <img src="images/left-drawings.png" alt="왼쪽 손그림">
-                <span class="hover-label">🍞 제과제빵 & 기술</span>
-            </a>
-
-            <!-- 추가 손그림 1: 친한 친구 -->
-            <a href="friend-detail.html" class="side-area friend-card image-card">
-                <img src="images/20104_drawing 1.png" alt="친한 친구 손그림">
-                <span class="hover-label">🏫 친한 친구, 살짝 좋아할지도?</span>
-            </a>
-        </div>
-
-        <a href="center-detail.html" class="center-area center-card image-card">
-            <img src="images/center-student.png" alt="학생 사진">
-            <span class="hover-label">✨ 프로필</span>
-        </a>
-
-        <!-- 오른쪽 세로 열: 좋아하는 선생님 & 좋아하는 것들 -->
-        <div class="side-column right-column">
-            <!-- 추가 손그림 2: 좋아하는 선생님 -->
-            <a href="teacher-detail.html" class="side-area teacher-card image-card">
-                <img src="images/20104_drawing 2.png" alt="좋아하는 선생님 손그림">
-                <span class="hover-label">👩‍🏫 좋아하는 선생님</span>
-            </a>
-
-            <a href="right-detail.html" class="side-area right-card image-card">
-                <img src="images/right-drawings.png" alt="오른쪽 손그림">
-                <span class="hover-label">💖 좋아하는 것들</span>
-            </a>
-        </div>
-
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-group">
+        <span class="logo-badge" id="schoolBadge">금천고</span>
+        <h1 class="logo-title" id="siteLogoTitle">우리 반을 소개합니다</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#education" class="nav-link">교육 내용</a>
+        <a href="#students" class="nav-link">학생 소개</a>
+        <a href="#issues" class="nav-link">주요 이슈</a>
+      </nav>
     </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <span class="hero-subtitle-badge" id="heroBadge">2026학년도 금천고등학교</span>
+        <h2 class="hero-title" id="heroTitle">함께 꿈꾸고 성장하는 우리들의 이야기</h2>
+        <p class="hero-desc" id="heroDesc">
+          6명의 소중한 친구들이 각자의 개성과 열정으로 만들어가는 따뜻한 학급 공간입니다.<br>
+          다양한 교육 활동과 손그림 속에 담긴 다정한 시선을 확인해보세요!
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Education Section -->
+    <section id="education" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">📚</span>
+          <h2 class="section-title">1. 학급 교육 내용</h2>
+        </div>
+        
+        <div class="edu-grid" id="eduGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Student Intro Section -->
+    <section id="students" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">🎨</span>
+          <h2 class="section-title">2. 우리 반 학생 소개 (6명)</h2>
+        </div>
+        
+        <div class="student-grid" id="studentGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Main Issues Section -->
+    <section id="issues" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">📌</span>
+          <h2 class="section-title">3. 학급 주요 이슈 & 소식</h2>
+        </div>
+        
+        <div class="issues-grid" id="issuesGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 금천고등학교 학급 소개 페이지 | 모든 손그림과 활동 기록은 학생들의 정성으로 제작되었습니다.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
 
 </body>
 </html>

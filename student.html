@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학생 자기소개 | 손그림 포트폴리오</title>
+  <meta name="description" content="금천고 학생의 손그림 포트폴리오와 작품 이야기를 만나보세요.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="student-page-body">
+
+  <!-- Header Navigation -->
+  <header class="student-page-header">
+    <a href="index.html" class="back-btn">
+      <span>⬅</span> 메인 홈으로
+    </a>
+
+    <div class="student-selector-nav">
+      <button id="prevStudentBtn" class="student-nav-btn">◀ 이전 친구</button>
+      <button id="nextStudentBtn" class="student-nav-btn">다음 친구 ▶</button>
+    </div>
+  </header>
+
+  <!-- Main Stage Viewport Fit -->
+  <main class="student-viewport">
+    <div class="student-stage">
+      
+      <!-- Left Post-it Column -->
+      <div class="drawings-column left-side" id="leftDrawingsCol">
+        <!-- Rendered dynamically by js/student.js -->
+      </div>
+
+      <!-- Center Area: Name on Top, Student Portrait Below -->
+      <div class="center-area" id="centerArea">
+        <div class="center-name-frame">
+          <img id="centerNameImg" src="" alt="학생 이름" class="center-name-img">
+          <span id="centerNameFallback" class="center-name-fallback" style="display:none;"></span>
+        </div>
+        <div class="center-student-frame">
+          <img id="centerStudentImg" src="" alt="학생 이미지" class="center-student-img">
+        </div>
+      </div>
+
+      <!-- Right Post-it Column -->
+      <div class="drawings-column right-side" id="rightDrawingsCol">
+        <!-- Rendered dynamically by js/student.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Drawing Detail Popup Modal -->
+  <div class="modal-overlay" id="drawingModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="닫기">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-student-tag" id="modalStudentName">학생 작품</span>
+        <h2 class="modal-title" id="modalTitle">작품 상세 소개</h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image-box">
+          <img id="modalImage" src="" alt="손그림 확대" class="modal-image">
+        </div>
+
+        <div class="modal-text-section">
+          <div>
+            <h3 class="modal-block-title">💡 그림을 그리게 된 동기 (Motivation)</h3>
+            <p class="modal-block-desc" id="modalMotivation"></p>
+          </div>
+
+          <div>
+            <h3 class="modal-block-title">📖 그림 관련 이야기 (Story & Description)</h3>
+            <p class="modal-block-desc" id="modalStory"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/student.js"></script>
+
+</body>
+</html>
