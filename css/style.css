@@ -194,98 +194,169 @@ a {
   color: #3E2723;
 }
 
-.edu-grid {
+/* Group Gallery Section */
+.group-gallery-block {
+  background: #FFFDF9;
+}
+
+.group-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
-.edu-card {
+.group-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 3px solid #F0E2D0;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.group-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-warm);
+}
+
+.group-img-wrapper {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #FDF9F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.group-card:hover .group-img {
+  transform: scale(1.05);
+}
+
+.group-card-caption {
+  padding: 14px 18px;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #4A3B32;
+  background: #FFFDF8;
+  border-top: 1px dashed #EFE4D4;
+}
+
+/* Education Cards - Accessible for Special Ed Students */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.edu-card.simple-accessible {
   background: var(--bg-card);
   border-radius: var(--radius-md);
   padding: 24px;
-  border: 2px solid #F0E5D4;
+  border: 3px solid #F0E5D4;
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.edu-card.simple-accessible:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-yellow);
 }
 
 .edu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 2px dashed #F5E8D8;
+  padding-bottom: 12px;
 }
 
 .edu-icon-title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .edu-emoji {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   background: #FFF3E0;
-  padding: 6px 10px;
-  border-radius: 12px;
+  padding: 6px 12px;
+  border-radius: 16px;
 }
 
 .edu-title {
   font-family: var(--font-hand);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #3E2723;
 }
 
 .edu-badge {
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 14px;
   background: #E1F5FE;
   color: #0288D1;
 }
 
-.edu-details {
+.easy-text {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 0.95rem;
-  flex-grow: 1;
+  gap: 12px;
+  font-size: 1.1rem;
 }
 
-.edu-detail-item {
+.easy-text .edu-detail-item {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
 }
 
-.edu-label {
+.easy-text .edu-label {
   font-weight: 700;
   color: #6D4C41;
   white-space: nowrap;
 }
 
-.edu-val {
+.easy-text .edu-val {
   color: var(--text-main);
+  font-weight: 500;
 }
 
-.edu-gallery-wrapper {
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px dashed #EFE5D5;
+.easy-text .highlight-act {
+  margin-top: 4px;
 }
 
-.edu-gallery-placeholder {
-  background: #FAF6EF;
-  border: 1px dashed #D6C8B4;
-  border-radius: var(--radius-sm);
-  padding: 10px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-light);
+.easy-text .highlight-act .edu-val {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #D84315;
+  background: #FBE9E7;
+  padding: 8px 14px;
+  border-radius: 14px;
+  display: block;
+  width: 100%;
 }
 
+/* Student Grid & Cards */
 .student-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -306,75 +377,62 @@ a {
 
 .student-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(100, 70, 40, 0.15);
+  box-shadow: 0 18px 36px rgba(100, 70, 40, 0.16);
   border-color: var(--accent-yellow);
 }
 
 .student-card-top {
-  height: 220px;
+  height: 250px;
   background-color: var(--bg-secondary);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 12px;
+  overflow: hidden;
 }
 
 .student-card-img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+  border-radius: 12px;
 }
 
 .student-card-body {
-  padding: 20px;
+  padding: 24px 16px 20px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.student-number-badge {
-  font-family: var(--font-hand);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #795548;
-  background: #FFF3E0;
-  padding: 2px 14px;
-  border-radius: 12px;
-  margin-bottom: 6px;
+  justify-content: center;
+  min-height: 150px;
 }
 
 .student-name-img {
-  max-height: 48px;
-  max-width: 180px;
+  max-height: 95px;
+  max-width: 270px;
   object-fit: contain;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  filter: none;
+  transition: transform 0.25s ease;
+}
+
+.student-card:hover .student-name-img {
+  transform: scale(1.08);
 }
 
 .student-name-fallback {
   font-family: var(--font-hand);
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #3E2723;
+  margin-bottom: 8px;
 }
 
 .student-keyword {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.student-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #4A3B32;
-  color: #FFFFFF;
-  font-family: var(--font-hand);
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 8px 20px;
-  border-radius: 20px;
 }
 
 .issues-grid {
@@ -503,7 +561,7 @@ a {
   background: #F5EBDC;
 }
 
-/* Main Viewport Stage - Perfectly Fitted to Viewport Height */
+/* Main Viewport Stage */
 .student-viewport {
   flex-grow: 1;
   height: calc(100vh - 52px);
@@ -520,7 +578,7 @@ a {
 
 .student-stage {
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 360px) 1fr;
+  grid-template-columns: 1fr minmax(280px, 380px) 1fr;
   align-items: center;
   gap: 20px;
   width: 100%;
@@ -545,8 +603,8 @@ a {
 
 .center-name-frame {
   width: 100%;
-  max-width: 320px;
-  max-height: 110px;
+  max-width: 360px;
+  max-height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -555,21 +613,21 @@ a {
 
 .center-name-img {
   max-width: 100%;
-  max-height: 110px;
+  max-height: 130px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+  filter: none;
 }
 
 .center-name-fallback {
   font-family: var(--font-hand);
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #3E2723;
 }
 
 .center-student-frame {
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
   max-height: 50vh;
   display: flex;
   justify-content: center;
@@ -582,7 +640,8 @@ a {
   max-width: 100%;
   max-height: 50vh;
   object-fit: contain;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.12));
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(60, 40, 20, 0.14);
 }
 
 /* Side Drawings Columns */
@@ -605,7 +664,7 @@ a {
   align-items: flex-start;
 }
 
-/* Pure White Drawing Card - Pure Image, No Text Label */
+/* Pure White Drawing Card */
 .postit-card.pure-white {
   width: 100%;
   max-width: 250px;
@@ -659,9 +718,7 @@ a {
 .rotate-pos-2 { transform: rotate(2.5deg); }
 .rotate-neg-5 { transform: rotate(-4deg); }
 
-/* ==========================================================================
-   6. Modal Window (Drawing Detail Popup)
-   ========================================================================== */
+/* Modal Window */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -742,9 +799,10 @@ a {
 
 .modal-title {
   font-family: var(--font-hand);
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 700;
   color: #3E2723;
+  margin-top: 4px;
 }
 
 .modal-body {
@@ -783,16 +841,178 @@ a {
 
 .modal-block-title {
   font-family: var(--font-hand);
-  font-size: 1.45rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #5D4037;
+}
+
+/* Display Group for Student Story & Teacher Note */
+.story-display-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.story-block {
+  background: #FFFFFF;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  border: 1.5px solid #F0E8DC;
+}
+
+.story-block.teacher-block {
+  background: #FFFDE7;
+  border-color: #FFE082;
+}
+
+.sub-block-title {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
   font-weight: 700;
   color: #5D4037;
   margin-bottom: 4px;
 }
 
 .modal-block-desc {
-  font-size: 1.05rem;
-  color: #4A3B32;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #3E2723;
   line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* Story Header & Inline Editor for Keyboard/Tablet Story Input */
+.story-header-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.story-edit-btn {
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #D84315;
+  background: #FBE9E7;
+  border: 1.5px solid #FFAB91;
+  padding: 4px 14px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.story-edit-btn:hover {
+  background: var(--accent-warm);
+  color: #FFFFFF;
+  border-color: var(--accent-warm);
+}
+
+.story-edit-box {
+  margin-top: 12px;
+  background: #FFFFFF;
+  border: 2px solid #FFE0B2;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-label {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5D4037;
+}
+
+.title-input {
+  width: 100%;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #3E2723;
+  border: 1.5px solid #E0D0B8;
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  background: #FFFDF9;
+  outline: none;
+}
+
+.title-input:focus {
+  border-color: var(--accent-warm);
+  box-shadow: 0 0 0 3px rgba(255, 138, 101, 0.2);
+}
+
+.story-textarea {
+  width: 100%;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #3E2723;
+  border: 1.5px solid #E0D0B8;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  resize: vertical;
+  background: #FFFDF9;
+  outline: none;
+  line-height: 1.5;
+}
+
+.story-textarea.teacher-textarea {
+  background: #FFFDE7;
+  border-color: #FFE082;
+}
+
+.story-textarea:focus {
+  border-color: var(--accent-warm);
+  box-shadow: 0 0 0 3px rgba(255, 138, 101, 0.2);
+}
+
+.story-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.story-save-btn {
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #2E7D32;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.story-save-btn:hover {
+  background: #1B5E20;
+}
+
+.story-cancel-btn {
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6E6761;
+  background: #EFEFEF;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.story-cancel-btn:hover {
+  background: #E0E0E0;
 }
 
 /* Mobile & Tablet Responsiveness */
@@ -855,6 +1075,7 @@ a {
 @media (max-width: 600px) {
   .logo-title { font-size: 1.4rem; }
   .hero-title { font-size: 2.3rem; }
+  .group-grid { grid-template-columns: 1fr; }
   .student-grid { grid-template-columns: 1fr; }
   .drawings-column { grid-template-columns: 1fr; }
 }

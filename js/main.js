@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   renderClassHeaderInfo();
-  renderEducationSection();
+  renderGroupGallerySection();
   renderStudentSection();
+  renderEducationSection();
   renderIssuesSection();
 });
 
@@ -26,51 +27,25 @@ function renderClassHeaderInfo() {
   if (heroBadge) heroBadge.textContent = `${info.heroBadge} | ${info.gradeClass}`;
 }
 
-// 1. 교육 내용 섹션 렌더링
-function renderEducationSection() {
-  const container = document.getElementById('eduGridContainer');
-  if (!container || !CLASS_DATA.education) return;
+// 1. 단체 추억 갤러리 섹션 렌더링 (group image 1~3)
+function renderGroupGallerySection() {
+  const container = document.getElementById('groupGridContainer');
+  if (!container || !CLASS_DATA.groupImages) return;
 
-  const eduItems = CLASS_DATA.education;
-  container.innerHTML = eduItems.map(item => `
-    <div class="edu-card" id="edu-card-${item.id}">
-      <div class="edu-header">
-        <div class="edu-icon-title">
-          <span class="edu-emoji">${item.icon || '📖'}</span>
-          <h3 class="edu-title">${item.title}</h3>
-        </div>
-        <span class="edu-badge">${item.badge || '교육활동'}</span>
+  const images = CLASS_DATA.groupImages;
+  container.innerHTML = images.map((img, idx) => `
+    <div class="group-card">
+      <div class="group-img-wrapper">
+        <img src="${img.url}" alt="${img.title}" class="group-img" onerror="this.src='./images/template.png';">
       </div>
-      
-      <ul class="edu-details">
-        <li class="edu-detail-item">
-          <span class="edu-label">📍 장소:</span>
-          <span class="edu-val">${item.location}</span>
-        </li>
-        <li class="edu-detail-item">
-          <span class="edu-label">⏰ 일정:</span>
-          <span class="edu-val">${item.schedule}</span>
-        </li>
-        <li class="edu-detail-item">
-          <span class="edu-label">💡 효과:</span>
-          <span class="edu-val">${item.effect}</span>
-        </li>
-        <li class="edu-detail-item">
-          <span class="edu-label">😊 반응:</span>
-          <span class="edu-val">${item.reaction}</span>
-        </li>
-      </ul>
-
-      <div class="edu-gallery-wrapper">
-        <div class="edu-gallery-placeholder">
-          🖼️ 추후 활동 사진 갤러리 업데이트 예정
-        </div>
+      <div class="group-card-caption">
+        <span>🌸 ${img.title}</span>
       </div>
     </div>
   `).join('');
 }
 
-// 2. 학생 소개 섹션 렌더링 (6명 카드)
+// 2. 학생 소개 섹션 렌더링 (손그림 보러가기 버튼 제거 & center name 크게 배치)
 function renderStudentSection() {
   const container = document.getElementById('studentGridContainer');
   if (!container || !CLASS_DATA.students) return;
@@ -78,29 +53,59 @@ function renderStudentSection() {
   const students = Object.values(CLASS_DATA.students);
 
   container.innerHTML = students.map(student => {
-    // 이름 이미지 존재 시 img 태그 사용, 실패 시 텍스트 fallback
     const nameMarkup = student.centerNameImg 
       ? `<img src="${student.centerNameImg}" alt="${student.name} 이름" class="student-name-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
          <span class="student-name-fallback" style="display:none;">${student.name}</span>`
       : `<span class="student-name-fallback">${student.name}</span>`;
 
     return `
-      <div class="student-card" onclick="location.href='student.html?id=${student.id}'">
-        <div class="student-card-top" style="background-color: ${student.bgColor || '#FFF9E6'};">
+      <div class="student-card" onclick="location.href='student.html?id=${student.id}'" title="${student.name} 손그림 보러가기">
+        <div class="student-card-top cute-bg">
           <img src="${student.centerStudentImg}" alt="${student.name} 프로필" class="student-card-img" onerror="this.src='./images/template.png';">
         </div>
         <div class="student-card-body">
-          <span class="student-number-badge">${student.number}</span>
           ${nameMarkup}
           <p class="student-keyword">${student.introKeyword || '꿈을 키우는 친구'}</p>
-          <span class="student-btn">손그림 보러가기 ➔</span>
         </div>
       </div>
     `;
   }).join('');
 }
 
-// 3. 주요 이슈 섹션 렌더링
+// 3. 교육 내용 섹션 렌더링 (특수학급 지적장애 학생 접근성을 고려한 텍스트 단순화)
+function renderEducationSection() {
+  const container = document.getElementById('eduGridContainer');
+  if (!container || !CLASS_DATA.education) return;
+
+  const eduItems = CLASS_DATA.education;
+  container.innerHTML = eduItems.map(item => `
+    <div class="edu-card simple-accessible" id="edu-card-${item.id}">
+      <div class="edu-header">
+        <div class="edu-icon-title">
+          <span class="edu-emoji">${item.icon || '📖'}</span>
+          <h3 class="edu-title">${item.title}</h3>
+        </div>
+        <span class="edu-badge">${item.badge || '활동'}</span>
+      </div>
+      
+      <ul class="edu-details easy-text">
+        <li class="edu-detail-item">
+          <span class="edu-label">📍 장소:</span>
+          <span class="edu-val">${item.location}</span>
+        </li>
+        <li class="edu-detail-item">
+          <span class="edu-label">⏰ 시간:</span>
+          <span class="edu-val">${item.schedule}</span>
+        </li>
+        <li class="edu-detail-item highlight-act">
+          <span class="edu-val">${item.activity || ''}</span>
+        </li>
+      </ul>
+    </div>
+  `).join('');
+}
+
+// 4. 주요 이슈 섹션 렌더링
 function renderIssuesSection() {
   const container = document.getElementById('issuesGridContainer');
   if (!container || !CLASS_DATA.issues) return;

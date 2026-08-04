@@ -19,8 +19,9 @@
         <h1 class="logo-title" id="siteLogoTitle">우리 반을 소개합니다</h1>
       </div>
       <nav class="main-nav">
-        <a href="#education" class="nav-link">교육 내용</a>
+        <a href="#group-gallery" class="nav-link">학급 추억</a>
         <a href="#students" class="nav-link">학생 소개</a>
+        <a href="#education" class="nav-link">교육 내용</a>
         <a href="#issues" class="nav-link">주요 이슈</a>
       </nav>
     </div>
@@ -41,26 +42,26 @@
       </div>
     </section>
 
-    <!-- 1. Education Section -->
-    <section id="education" class="section-block">
+    <!-- 1. Group Images Section (학급 추억) -->
+    <section id="group-gallery" class="section-block group-gallery-block">
       <div class="container">
         <div class="section-header">
-          <span class="section-icon">📚</span>
-          <h2 class="section-title">1. 학급 교육 내용</h2>
+          <span class="section-icon">📸</span>
+          <h2 class="section-title">우리 반 단체 추억 갤러리</h2>
         </div>
         
-        <div class="edu-grid" id="eduGridContainer">
+        <div class="group-grid" id="groupGridContainer">
           <!-- Rendered dynamically by js/main.js -->
         </div>
       </div>
     </section>
 
-    <!-- 2. Student Intro Section -->
+    <!-- 2. Student Intro Section (학생 소개 - 교육 내용보다 앞으로 배치) -->
     <section id="students" class="section-block">
       <div class="container">
         <div class="section-header">
           <span class="section-icon">🎨</span>
-          <h2 class="section-title">2. 우리 반 학생 소개 (6명)</h2>
+          <h2 class="section-title">우리 반 학생 소개 (6명)</h2>
         </div>
         
         <div class="student-grid" id="studentGridContainer">
@@ -69,12 +70,26 @@
       </div>
     </section>
 
-    <!-- 3. Main Issues Section -->
+    <!-- 3. Education Section (교육 내용) -->
+    <section id="education" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">📚</span>
+          <h2 class="section-title">학급 교육 활동</h2>
+        </div>
+        
+        <div class="edu-grid" id="eduGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Main Issues Section (주요 이슈) -->
     <section id="issues" class="section-block">
       <div class="container">
         <div class="section-header">
           <span class="section-icon">📌</span>
-          <h2 class="section-title">3. 학급 주요 이슈 & 소식</h2>
+          <h2 class="section-title">학급 주요 소식</h2>
         </div>
         
         <div class="issues-grid" id="issuesGridContainer">

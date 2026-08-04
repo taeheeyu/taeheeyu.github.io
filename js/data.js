@@ -11,29 +11,44 @@ const CLASS_DATA = {
     heroBadge: "2026학년도 금천고"
   },
 
+  groupImages: [
+    {
+      id: 1,
+      title: "함께해서 더 즐거운 우리 반",
+      url: "./images/cute version/group image 1.png"
+    },
+    {
+      id: 2,
+      title: "다 함께 꿈을 키우는 교실",
+      url: "./images/cute version/group image 2.png"
+    },
+    {
+      id: 3,
+      title: "언제나 웃음 가득한 학급 활동",
+      url: "./images/cute version/group image 3.png"
+    }
+  ],
+
+  // 3. 지적장애 학생도 한눈에 이해할 수 있도록 텍스트를 대폭 줄이고 직관적으로 단순화
   education: [
     {
       id: "baking",
       title: "제과제빵",
       icon: "🍞",
-      badge: "직업/실습",
+      badge: "실습",
       location: "조리실습실",
-      schedule: "매주 화요일 3-4교시",
-      effect: "협동심 및 제과 기초 기술 습득, 위생 관리 습관 형성",
-      reaction: "학생 만족도 최상! 직접 만든 빵과 쿠키를 나누며 커다란 성취감을 느낍니다.",
-      description: "재료 계량부터 반죽, 오븐 굽기까지 전 과정을 직접 수행하며 실용적인 조리 기술과 협동심을 키우는 클래스입니다.",
+      schedule: "매주 화요일",
+      activity: "🧁 맛있는 빵과 쿠키 만들기",
       images: []
     },
     {
       id: "itq",
-      title: "컴퓨터 자격증 (ITQ)",
+      title: "컴퓨터 교실",
       icon: "💻",
-      badge: "정보/자격증",
+      badge: "ITQ",
       location: "컴퓨터실",
-      schedule: "매주 목요일 5-6교시",
-      effect: "OA 활용 능력 증진, 한글 및 파워포인트 문서 작성, ITQ 자격증 취득",
-      reaction: "열정적인 분위기 속에서 각자의 목표 분량을 완수하며 포기하지 않고 집중합니다.",
-      description: "디지털 정보화 시대에 필요한 문서 작성 및 정보 검색 역량을 강화하여 ITQ 자격증 취득을 목표로 연습합니다.",
+      schedule: "매주 목요일",
+      activity: "⌨️ 타자 연습 & 컴퓨터 배우기",
       images: []
     },
     {
@@ -42,22 +57,18 @@ const CLASS_DATA = {
       icon: "✨",
       badge: "자기계발",
       location: "특별활동실",
-      schedule: "매주 수요일 2교시",
-      effect: "자기 표현 능력 향상, 올바른 용모와 태도 가꾸기, 자신감 배양",
-      reaction: "자신만의 스타일과 긍정적인 이미지를 찾아가며 거울 속 제 모습에 신나게 참여합니다.",
-      description: "긍정적인 자아상 형성과 타인과의 원활한 소통을 위해 어울리는 색상, 미소, 예절을 배우는 수업입니다.",
+      schedule: "매주 수요일",
+      activity: "🪞 예쁜 미소와 자신감 가꾸기",
       images: []
     },
     {
       id: "handbell",
-      title: "핸드벨 교육",
+      title: "핸드벨 음악",
       icon: "🔔",
-      badge: "음악/예술",
+      badge: "음악",
       location: "음악실",
-      schedule: "매주 금요일 3교시",
-      effect: "음악적 감수성 풍부화, 서로 호흡을 맞추는 박자감 및 아름다운 하모니 형성",
-      reaction: "아름다운 울림 소리에 마음이 편안해지며 집중하여 연주에 빠져듭니다.",
-      description: "자신의 화음을 정확한 박자에 울려 맑고 아름다운 합주곡을 만드는 감성 음악 수업입니다.",
+      schedule: "매주 금요일",
+      activity: "🎵 맑은 종소리 멜로디 연주",
       images: []
     }
   ],
@@ -65,24 +76,24 @@ const CLASS_DATA = {
   issues: [
     {
       id: "issue-1",
-      title: "2026학년도 첫 학급 활동 및 동아리 시작",
+      title: "2026학년도 우리 반 출발 🌸",
       date: "2026-03-10",
-      tag: "학급소식",
-      summary: "우리 반 6명 친구들과 함께하는 2026학년도 첫 교육 활동 및 자기소개 포트폴리오 제작이 시작되었습니다."
+      tag: "소식",
+      summary: "우리 반 6명 친구들과 함께 즐거운 학교 생활을 시작해요!"
     },
     {
       id: "issue-2",
-      title: "제과제빵 실습 첫 작품 완성!",
+      title: "맛있는 수제 쿠키 완성 🍪",
       date: "2026-03-24",
       tag: "실습",
-      summary: "직접 반죽하고 오븐에서 구워낸 달콤한 수제 쿠키를 선생님과 친구들에게 선물하며 첫 실습을 성공적으로 마쳤습니다."
+      summary: "직접 반죽하고 오븐에서 구워낸 수제 쿠키를 나눠 먹었어요."
     },
     {
       id: "issue-3",
-      title: "핸드벨 합주 연습 및 미니 발표회 예정",
+      title: "핸드벨 미니 음악회 🔔",
       date: "2026-04-15",
       tag: "행사",
-      summary: "서로 다른 음을 가진 핸드벨이 모여 멋진 멜로디를 만드는 연습을 다지고 있습니다. 학급 미니 음악회를 준비 중입니다."
+      summary: "친구들과 마음을 모아 예쁜 음악 멜로디를 준비해요."
     }
   ],
 
@@ -92,7 +103,7 @@ const CLASS_DATA = {
       number: "20104",
       name: "김정림",
       introKeyword: "따뜻한 미소와 다정한 마음",
-      centerStudentImg: "./images/20104/20104_center student_nobg.png",
+      centerStudentImg: "./images/cute version/20104_center student cute.png",
       centerNameImg: "./images/20104/20104_center name_nobg.png",
       bgColor: "#FAF8F5",
       drawings: [
@@ -134,7 +145,7 @@ const CLASS_DATA = {
       number: "20105",
       name: "김하음",
       introKeyword: "맑고 맑은 긍정 에너자이저",
-      centerStudentImg: "./images/20105/20105_center student_nobg.png",
+      centerStudentImg: "./images/cute version/20105_center student cute.png",
       centerNameImg: "./images/20105/20105_center name_nobg.png",
       bgColor: "#FAF8F5",
       drawings: [
@@ -182,7 +193,7 @@ const CLASS_DATA = {
       number: "20223",
       name: "정세헌",
       introKeyword: "진중하고 창의적인 아티스트",
-      centerStudentImg: "./images/20223/20223_center student_nobg.png",
+      centerStudentImg: "./images/cute version/20223_center student cut.png",
       centerNameImg: "./images/20223/20223_center image_nobg.png",
       bgColor: "#FAF8F5",
       drawings: [
@@ -230,7 +241,7 @@ const CLASS_DATA = {
       number: "20413",
       name: "임하나",
       introKeyword: "상냥하고 솔직한 분위기 메이커",
-      centerStudentImg: "./images/20413/201413_center student_nobg.png",
+      centerStudentImg: "./images/cute version/20413_center student cute.png",
       centerNameImg: "./images/20413/20413_center name_nobg.png",
       bgColor: "#FAF8F5",
       drawings: [
@@ -260,7 +271,7 @@ const CLASS_DATA = {
       number: "20616",
       name: "김성윤",
       introKeyword: "끈기 있고 정직한 노력파",
-      centerStudentImg: "./images/20616/20616_center student_nobg.png",
+      centerStudentImg: "./images/cute version/20616_center student cute.png",
       centerNameImg: "./images/20616/20616_center name_nobg.png",
       bgColor: "#FAF8F5",
       drawings: [
@@ -284,7 +295,7 @@ const CLASS_DATA = {
       number: "20625",
       name: "최예환",
       introKeyword: "위트 넘치는 열정 창작자",
-      centerStudentImg: "./images/20625/20625_center  student_nobg.png",
+      centerStudentImg: "./images/cute version/20625_center student cute.png",
       centerNameImg: "./images/20625/20625_center name_nobg.png",
       bgColor: "#FAF8F5",
       drawings: [

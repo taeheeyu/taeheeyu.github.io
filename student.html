@@ -58,7 +58,8 @@
 
       <div class="modal-header">
         <span class="modal-student-tag" id="modalStudentName">학생 작품</span>
-        <h2 class="modal-title" id="modalTitle">작품 상세 소개</h2>
+        <!-- 그림 제목 (직접 입력 및 수정 가능) -->
+        <h2 class="modal-title" id="modalTitle">작품 제목</h2>
       </div>
 
       <div class="modal-body">
@@ -67,15 +68,47 @@
         </div>
 
         <div class="modal-text-section">
-          <div>
-            <h3 class="modal-block-title">💡 그림을 그리게 된 동기 (Motivation)</h3>
-            <p class="modal-block-desc" id="modalMotivation"></p>
+          <div class="story-header-group">
+            <h3 class="modal-block-title">📖 작품 소개</h3>
+            <button id="modalEditBtn" class="story-edit-btn">✏️ 제목 & 글 작성/수정</button>
           </div>
 
-          <div>
-            <h3 class="modal-block-title">📖 그림 관련 이야기 (Story & Description)</h3>
-            <p class="modal-block-desc" id="modalStory"></p>
+          <!-- Display Mode -->
+          <div id="storyDisplayBox" class="story-display-group">
+            <div class="story-block">
+              <h4 class="sub-block-title">📖 그림 관련 이야기</h4>
+              <p class="modal-block-desc" id="modalStory"></p>
+            </div>
+
+            <div class="story-block teacher-block">
+              <h4 class="sub-block-title">💬 선생님 추가 설명</h4>
+              <p class="modal-block-desc" id="modalTeacherNote"></p>
+            </div>
           </div>
+
+          <!-- Interactive Input / Edit Area for Title, Student Story & Teacher Note -->
+          <div class="story-edit-box" id="storyEditBox" style="display: none;">
+            <div class="input-field-group">
+              <label for="titleInput" class="input-label">🎨 그림 제목:</label>
+              <input type="text" id="titleInput" class="title-input" placeholder="그림의 제목을 입력하세요 (예: 내가 그린 수박)">
+            </div>
+
+            <div class="input-field-group">
+              <label for="storyInput" class="input-label">📖 그림 관련 이야기 (학생 작성):</label>
+              <textarea id="storyInput" class="story-textarea" rows="2" placeholder="학생이 직접 키보드나 태블릿으로 작성하는 이야기입니다."></textarea>
+            </div>
+
+            <div class="input-field-group">
+              <label for="teacherInput" class="input-label">💬 선생님 추가 설명 (선생님 작성):</label>
+              <textarea id="teacherInput" class="story-textarea teacher-textarea" rows="2" placeholder="학생이 직접 글을 쓰기 어려울 때 선생님이 보충 설명을 적어주는 공간입니다."></textarea>
+            </div>
+
+            <div class="story-btn-group">
+              <button id="storySaveBtn" class="story-save-btn">💾 저장하기</button>
+              <button id="storyCancelBtn" class="story-cancel-btn">취소</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
