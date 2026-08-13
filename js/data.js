@@ -19,12 +19,12 @@ const CLASS_DATA = {
     },
     {
       id: 2,
-      title: "다 함께 꿈을 키우는 교실",
+      title: "몸과 마음을 모두 가꾸는 학급 활동",
       url: "./images/cute version/group image 2.png"
     },
     {
       id: 3,
-      title: "언제나 웃음 가득한 학급 활동",
+      title: "새로운 경험과 익숙한 경험의 조화",
       url: "./images/cute version/group image 3.png"
     }
   ],
@@ -37,7 +37,7 @@ const CLASS_DATA = {
       icon: "🍞",
       badge: "실습",
       location: "조리실습실",
-      schedule: "매주 화요일",
+      schedule: "1학기 매주 화요일",
       activity: "🧁 맛있는 빵과 쿠키 만들기",
       images: []
     },
@@ -47,8 +47,8 @@ const CLASS_DATA = {
       icon: "💻",
       badge: "ITQ",
       location: "컴퓨터실",
-      schedule: "매주 목요일",
-      activity: "⌨️ 타자 연습 & 컴퓨터 배우기",
+      schedule: "1학기 매주 금요일",
+      activity: "⌨️ 파워포인트 기능 익히기 & 자격증 시험 준비하기",
       images: []
     },
     {
@@ -57,7 +57,7 @@ const CLASS_DATA = {
       icon: "✨",
       badge: "자기계발",
       location: "특별활동실",
-      schedule: "매주 수요일",
+      schedule: "2학기 매주 금요일",
       activity: "🪞 예쁜 미소와 자신감 가꾸기",
       images: []
     },
@@ -67,7 +67,7 @@ const CLASS_DATA = {
       icon: "🔔",
       badge: "음악",
       location: "음악실",
-      schedule: "매주 금요일",
+      schedule: "매주 화요일",
       activity: "🎵 맑은 종소리 멜로디 연주",
       images: []
     }
@@ -176,8 +176,8 @@ const CLASS_DATA = {
         {
           id: 5,
           imgUrl: "./images/20105/20105_drawing 5.png",
-          motivation: "친구들과 나눈 웃음소리를 형태로 담고 싶었습니다.",
-          story: "마음을 밝게 해주는 다정한 펜선이 돋보입니다."
+          motivation: "좋아하는 악기에요. 별명은 렐라짱!",
+          story: "점심시간, 쉬는시간 틈틈이 연습하기 바빠요. 연주할 수 있는 곡이 계속 늘어나요...(아기상어, 작은별, 곰세마리..)"
         },
         {
           id: 6,
@@ -200,38 +200,38 @@ const CLASS_DATA = {
         {
           id: 1,
           imgUrl: "./images/20223/20223_drawing 1.png",
-          motivation: "평소 관심 있게 보는 사물의 입체감을 묘사하고 싶었습니다.",
-          story: "탄탄한 구도와 독창적인 시선이 빛나는 드로잉입니다."
+          motivation: "만화를 그릴 때 필요해요.",
+          story: "만화를 그리는 도구도 잘 알아요."
         },
         {
           id: 2,
           imgUrl: "./images/20223/20223_drawing 2.png",
-          motivation: "멋진 캐릭터 디자인을 내 손으로 완성해보고 싶어 그렸습니다.",
-          story: "강렬한 개성과 과감한 표현이 돋보입니다."
+          motivation: "일본 최초의 여성 히어로이자 j.s.p 코믹스의 주인공입니다.",
+          story: "세헌이의 멋진 상상 속 슈퍼히어로 캐릭터입니다. j.s.p 코믹스라니...엄청난 세계관이 느껴지네요."
         },
         {
           id: 3,
           imgUrl: "./images/20223/20223_drawing 3.png",
-          motivation: "상상 속 모험 이야기의 한 장면을 시각화했습니다.",
-          story: "이야기가 담겨 있어 보는 재미를 더해주는 작품입니다."
+          motivation: "제가 좋아하는 음식입니다.",
+          story: "치킨과 더불어 세헌이의 최애 메뉴에요. 세헌이는 음식의 유래, 역사에 대해서도 아주 잘 알고 있답니다."
         },
         {
           id: 4,
           imgUrl: "./images/20223/20223_drawing 4.png",
-          motivation: "자연의 형상에서 받은 느낌을 흥미롭게 재구성했습니다.",
-          story: "자연스럽고 깊이감 있는 질감이 느껴지는 그림입니다."
+          motivation: "일본 특촬물로 울트라 시리즈의 스핀오프 시리즈 입니다. 울트라맨에 등장한 울트라 우먼을 중심으로 이끌고 있습니다.",
+          story: "세헌이는 화려한 의상을 좋아해요."
         },
         {
           id: 5,
           imgUrl: "./images/20223/20223_drawing 5.png",
-          motivation: "집중하여 한 땀 한 땀 정성을 쏟아낸 순간입니다.",
-          story: "정교한 선과 꼼꼼한 마무리가 돋보이는 작품입니다."
+          motivation: "일본 만화 및 장편 티비 애니메이션 시리즈(프리큐어 올스타즈)에 주인공입니다.",
+          story: "얼굴과 상의부분에 많은 디테일이 들어가고 당당한 발걸음이 느껴지는 그림입니다."
         },
         {
           id: 6,
           imgUrl: "./images/20223/20223_drawing 6.png",
-          motivation: "나만의 특별한 기호와 패턴을 구상해보았습니다.",
-          story: "세련되고 감각적인 형태미를 보여줍니다."
+          motivation: "프리큐어와 함께 비너스의 대표하는 캐릭터이자 티비 애니메이션 시리즈(니코와 친구들)의 주인공이자 비너스의 최초 첫 캐릭터입니다. 상상한 캐릭터에요.",
+          story: "화려한 전사 캐릭터가 아닌 귀여운 동물 캐릭터도 좋아하는군요~"
         }
       ]
     },
