@@ -19,7 +19,7 @@ const CLASS_DATA = {
     },
     {
       id: 2,
-      title: "몸과 마음을 모두 가꾸는 학급 활동",
+      title: "몸과 마음을 모두 가꾸는 학급",
       url: "./images/cute version/group image 2.png"
     },
     {
@@ -201,7 +201,7 @@ const CLASS_DATA = {
           id: 1,
           imgUrl: "./images/20223/20223_drawing 1.png",
           motivation: "만화를 그릴 때 필요해요.",
-          story: "만화를 그리는 도구도 잘 알아요."
+          story: "만년필을 사용하는 만화감독을 떠올렸대요."
         },
         {
           id: 2,
@@ -219,7 +219,7 @@ const CLASS_DATA = {
           id: 4,
           imgUrl: "./images/20223/20223_drawing 4.png",
           motivation: "일본 특촬물로 울트라 시리즈의 스핀오프 시리즈 입니다. 울트라맨에 등장한 울트라 우먼을 중심으로 이끌고 있습니다.",
-          story: "세헌이는 화려한 의상을 좋아해요."
+          story: "화려한 의상을 입고 정의를 위해 싸우는 캐릭터를 좋아하나봐요."
         },
         {
           id: 5,
@@ -231,7 +231,7 @@ const CLASS_DATA = {
           id: 6,
           imgUrl: "./images/20223/20223_drawing 6.png",
           motivation: "프리큐어와 함께 비너스의 대표하는 캐릭터이자 티비 애니메이션 시리즈(니코와 친구들)의 주인공이자 비너스의 최초 첫 캐릭터입니다. 상상한 캐릭터에요.",
-          story: "화려한 전사 캐릭터가 아닌 귀여운 동물 캐릭터도 좋아하는군요~"
+          story: "화려한 전사 캐릭터가 아닌 귀여운 동물 캐릭터도 좋아한답니다~"
         }
       ]
     },

@@ -102,7 +102,7 @@ function renderDrawings(student) {
   });
 }
 
-// 모달 팝업 열기 (그림 제목 / 그림 이야기 / 선생님 설명 동시 처리)
+// 모달 팝업 열기 (motivation -> 그림 관련 이야기 / story -> 선생님 추가 설명 정확히 매핑)
 function openDrawingModal(studentId, studentName, drawing, fallbackTitle) {
   activeStudentId = studentId;
   activeDrawingId = drawing.id;
@@ -119,22 +119,25 @@ function openDrawingModal(studentId, studentName, drawing, fallbackTitle) {
   modalImage.src = drawing.imgUrl;
   modalImage.alt = `${studentName} 손그림 상세`;
 
-  // 1. 그림 제목 (localStorage -> data.js -> fallback)
+  // 1. 그림 제목 (localStorage -> data.js title -> fallback)
   const savedTitleKey = `custom_title_${studentId}_${drawing.id}`;
   const customTitle = localStorage.getItem(savedTitleKey);
   const finalTitle = customTitle || drawing.title || fallbackTitle || "작품 제목을 적어보세요!";
   modalTitle.textContent = finalTitle;
 
-  // 2. 그림 관련 이야기 (학생 작성)
+  // 2. 그림 관련 이야기 (학생 작성 / motivation 우선 매핑)
   const savedStoryKey = `custom_story_${studentId}_${drawing.id}`;
   const customStory = localStorage.getItem(savedStoryKey);
-  const finalStory = customStory || drawing.story || "그림에 대한 나만의 이야기를 직접 적어보세요!";
+  // data.js의 motivation이 있으면 학생 이야기로, 없으면 story 활용
+  const dataStory = drawing.motivation || drawing.story;
+  const finalStory = customStory || dataStory || "그림에 대한 나만의 이야기를 직접 적어보세요!";
   modalStory.textContent = finalStory;
 
-  // 3. 선생님 추가 설명 (선생님 작성)
+  // 3. 선생님 추가 설명 (선생님 작성 / motivation이 존재하면 story를 선생님 설명으로, 그 외 teacherNote 활용)
   const savedTeacherKey = `custom_teacher_${studentId}_${drawing.id}`;
   const customTeacher = localStorage.getItem(savedTeacherKey);
-  const finalTeacher = customTeacher || drawing.teacherNote || "선생님의 보충 설명이 들어가는 공간입니다.";
+  const dataTeacher = (drawing.motivation && drawing.story) ? drawing.story : (drawing.teacherNote || "");
+  const finalTeacher = customTeacher || dataTeacher || "선생님의 보충 설명이 들어가는 공간입니다.";
   modalTeacherNote.textContent = finalTeacher;
 
   // 수정 박스 초기화 및 숨기기
