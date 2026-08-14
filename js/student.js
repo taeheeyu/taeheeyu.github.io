@@ -116,7 +116,7 @@ function renderDrawings(student) {
   });
 }
 
-// 모달 팝업 열기 (motivation -> 그림 관련 이야기 / story -> 선생님 추가 설명 정확히 매핑)
+// 모달 팝업 열기 (story -> 그림 관련 이야기 / teacherNote -> 선생님 추가 설명)
 function openDrawingModal(studentId, studentName, drawing, fallbackTitle) {
   activeStudentId = studentId;
   activeDrawingId = drawing.id;
@@ -125,34 +125,52 @@ function openDrawingModal(studentId, studentName, drawing, fallbackTitle) {
   const modalStudentName = document.getElementById('modalStudentName');
   const modalTitle = document.getElementById('modalTitle');
   const modalImage = document.getElementById('modalImage');
+  
   const modalStory = document.getElementById('modalStory');
   const modalTeacherNote = document.getElementById('modalTeacherNote');
+
+  const storyBlock = document.getElementById('storyBlock');
+  const teacherBlock = document.getElementById('teacherBlock');
+  
   const storyEditBox = document.getElementById('storyEditBox');
 
   modalStudentName.textContent = `${studentName} 친구의 작품`;
   modalImage.src = drawing.imgUrl;
   modalImage.alt = `${studentName} 손그림 상세`;
 
-  // 1. 그림 제목 (localStorage -> data.js title -> fallback)
+  // 1. 그림 제목 (data.js title -> localStorage -> fallback)
   const savedTitleKey = `custom_title_${studentId}_${drawing.id}`;
   const customTitle = localStorage.getItem(savedTitleKey);
-  const finalTitle = customTitle || drawing.title || fallbackTitle || "작품 제목을 적어보세요!";
+  const finalTitle = drawing.title || customTitle || fallbackTitle || "작품 상세 소개";
   modalTitle.textContent = finalTitle;
 
-  // 2. 그림 관련 이야기 (학생 작성 / motivation 우선 매핑)
+  // 2. 그림 관련 이야기 (data.js의 motivation 또는 story 최우선 표출)
   const savedStoryKey = `custom_story_${studentId}_${drawing.id}`;
   const customStory = localStorage.getItem(savedStoryKey);
-  // data.js의 motivation이 있으면 학생 이야기로, 없으면 story 활용
-  const dataStory = drawing.motivation || drawing.story;
-  const finalStory = customStory || dataStory || "그림에 대한 나만의 이야기를 직접 적어보세요!";
-  modalStory.textContent = finalStory;
+  const dataStory = drawing.motivation || drawing.story || "";
+  const finalStory = dataStory || customStory || "";
+  if (modalStory && storyBlock) {
+    if (finalStory) {
+      modalStory.textContent = finalStory;
+      storyBlock.style.display = 'block';
+    } else {
+      storyBlock.style.display = 'none';
+    }
+  }
 
-  // 3. 선생님 추가 설명 (선생님 작성 / motivation이 존재하면 story를 선생님 설명으로, 그 외 teacherNote 활용)
+  // 3. 선생님 추가 설명 (data.js의 story 또는 teacherNote 최우선 표출)
   const savedTeacherKey = `custom_teacher_${studentId}_${drawing.id}`;
   const customTeacher = localStorage.getItem(savedTeacherKey);
   const dataTeacher = (drawing.motivation && drawing.story) ? drawing.story : (drawing.teacherNote || "");
-  const finalTeacher = customTeacher || dataTeacher || "선생님의 보충 설명이 들어가는 공간입니다.";
-  modalTeacherNote.textContent = finalTeacher;
+  const finalTeacher = dataTeacher || customTeacher || "";
+  if (modalTeacherNote && teacherBlock) {
+    if (finalTeacher) {
+      modalTeacherNote.textContent = finalTeacher;
+      teacherBlock.style.display = 'block';
+    } else {
+      teacherBlock.style.display = 'none';
+    }
+  }
 
   // 수정 박스 초기화 및 숨기기
   if (storyEditBox) storyEditBox.style.display = 'none';
@@ -175,13 +193,13 @@ function setupStoryInputEvents() {
   const modalStory = document.getElementById('modalStory');
   const modalTeacherNote = document.getElementById('modalTeacherNote');
 
-  if (!modalEditBtn || !storyEditBox || !titleInput || !storyInput || !teacherInput || !storySaveBtn || !storyCancelBtn) return;
+  if (!modalEditBtn || !storyEditBox || !titleInput || !storySaveBtn || !storyCancelBtn) return;
 
   // 작성/수정 버튼 클릭
   modalEditBtn.addEventListener('click', () => {
-    titleInput.value = modalTitle.textContent.includes("작품 제목을") ? "" : modalTitle.textContent;
-    storyInput.value = modalStory.textContent.includes("이야기를 적어보세요") ? "" : modalStory.textContent;
-    teacherInput.value = modalTeacherNote.textContent.includes("보충 설명이 들어가는") ? "" : modalTeacherNote.textContent;
+    titleInput.value = (modalTitle && modalTitle.textContent !== "작품 상세 소개") ? modalTitle.textContent : "";
+    if (storyInput) storyInput.value = modalStory ? modalStory.textContent : "";
+    if (teacherInput) teacherInput.value = modalTeacherNote ? modalTeacherNote.textContent : "";
 
     storyEditBox.style.display = 'flex';
     titleInput.focus();
@@ -190,8 +208,8 @@ function setupStoryInputEvents() {
   // 저장하기 버튼 클릭
   storySaveBtn.addEventListener('click', () => {
     const newTitle = titleInput.value.trim();
-    const newStory = storyInput.value.trim();
-    const newTeacher = teacherInput.value.trim();
+    const newStory = storyInput ? storyInput.value.trim() : "";
+    const newTeacher = teacherInput ? teacherInput.value.trim() : "";
 
     if (!newTitle && !newStory && !newTeacher) {
       alert("제목이나 내용을 입력해주세요!");
@@ -201,15 +219,19 @@ function setupStoryInputEvents() {
     if (activeStudentId && activeDrawingId) {
       if (newTitle) {
         localStorage.setItem(`custom_title_${activeStudentId}_${activeDrawingId}`, newTitle);
-        modalTitle.textContent = newTitle;
+        if (modalTitle) modalTitle.textContent = newTitle;
       }
       if (newStory) {
         localStorage.setItem(`custom_story_${activeStudentId}_${activeDrawingId}`, newStory);
-        modalStory.textContent = newStory;
+        if (modalStory) modalStory.textContent = newStory;
+        const storyBlock = document.getElementById('storyBlock');
+        if (storyBlock) storyBlock.style.display = 'block';
       }
       if (newTeacher) {
         localStorage.setItem(`custom_teacher_${activeStudentId}_${activeDrawingId}`, newTeacher);
-        modalTeacherNote.textContent = newTeacher;
+        if (modalTeacherNote) modalTeacherNote.textContent = newTeacher;
+        const teacherBlock = document.getElementById('teacherBlock');
+        if (teacherBlock) teacherBlock.style.display = 'block';
       }
 
       storyEditBox.style.display = 'none';

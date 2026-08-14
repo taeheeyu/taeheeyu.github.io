@@ -19,7 +19,7 @@ const CLASS_DATA = {
     },
     {
       id: 2,
-      title: "몸과 마음을 모두 가꾸는 학급",
+      title: "몸과 마음을 가꾸는 학급",
       url: "./images/cute version/group image 2.png"
     },
     {
@@ -67,7 +67,7 @@ const CLASS_DATA = {
       icon: "🔔",
       badge: "음악",
       location: "음악실",
-      schedule: "매주 화요일",
+      schedule: "1,2학기 매주 화요일",
       activity: "🎵 맑은 종소리 멜로디 연주",
       images: []
     }
@@ -117,25 +117,25 @@ const CLASS_DATA = {
           id: 2,
           imgUrl: "./images/20104/20104_drawing 2.png",
           motivation: "♥",
-          story: "좋아하는 선생님이래요. 어쩌면 나를 그린 게 아닐까 생각합니다."
+          story: "좋아하는 선생님이래요. 선생님 주변에 하트가 뿅뿅 그려져있어요."
         },
         {
           id: 3,
           imgUrl: "./images/20104/20104_drawing 3.png",
           motivation: "ㅑ호갸ㅔㅕ",
-          story: "좋아하는 선생님일까? 좋아하는 친구일까? "
+          story: "누구일까? 좋아하는 친구? 가족? "
         },
         {
           id: 4,
           imgUrl: "./images/20104/20104_drawing 4.png",
           motivation: "★",
-          story: "좋아하는 친구에요. 정림이 마음 속 누가 있는걸까요~~?"
+          story: "파마머리를 한 친구네요. 정림이 마음 속 누가 있는걸까요~~?"
         },
         {
           id: 5,
           imgUrl: "./images/20104/20104_drawing 5.png",
-          motivation: "☆",
-          story: "정림이가 자주 말하는 단어 중에 하나입니다. 다이소에서 쇼핑을 좋아하나봐요."
+          motivation: "엄마 아빠",
+          story: "정림이가 자주 말하는 단어 중에 하나입니다. 가족들과 다이소에서 쇼핑을 하나봐요."
         }
       ]
     },
@@ -171,7 +171,7 @@ const CLASS_DATA = {
           id: 4,
           imgUrl: "./images/20105/20105_drawing 4.png",
           motivation: "리코더는 제일 좋아합니다 이를 리코짱! 뀨하",
-          story: "하음이는 좋아하는 물건에 항상 별명을 지어줍니다. "내 리코짱 어디있지?" 찾아헤맵니다. "뀨하"는 하음이의 부캐가 내는 귀여운 소리입니다."
+          story: "하음이는 좋아하는 물건에 항상 별명을 지어줍니다. \"내 리코짱 어디있지?\" 찾아헤맵니다. \"뀨하\"는 하음이의 부캐가 내는 귀여운 소리입니다."
         },
         {
           id: 5,

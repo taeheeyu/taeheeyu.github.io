@@ -75,18 +75,18 @@
 
           <!-- Display Mode -->
           <div id="storyDisplayBox" class="story-display-group">
-            <div class="story-block">
+            <div class="story-block" id="storyBlock">
               <h4 class="sub-block-title">📖 그림 관련 이야기</h4>
               <p class="modal-block-desc" id="modalStory"></p>
             </div>
 
-            <div class="story-block teacher-block">
+            <div class="story-block teacher-block" id="teacherBlock">
               <h4 class="sub-block-title">💬 선생님 추가 설명</h4>
               <p class="modal-block-desc" id="modalTeacherNote"></p>
             </div>
           </div>
 
-          <!-- Interactive Input / Edit Area for Title, Student Story & Teacher Note -->
+          <!-- Interactive Input / Edit Area for Title, Story & Teacher Note -->
           <div class="story-edit-box" id="storyEditBox" style="display: none;">
             <div class="input-field-group">
               <label for="titleInput" class="input-label">🎨 그림 제목:</label>
@@ -94,8 +94,8 @@
             </div>
 
             <div class="input-field-group">
-              <label for="storyInput" class="input-label">📖 그림 관련 이야기 (학생 작성):</label>
-              <textarea id="storyInput" class="story-textarea" rows="2" placeholder="학생이 직접 키보드나 태블릿으로 작성하는 이야기입니다."></textarea>
+              <label for="storyInput" class="input-label">📖 그림 관련 이야기:</label>
+              <textarea id="storyInput" class="story-textarea" rows="2" placeholder="그림에 대한 상세한 이야기를 입력하세요."></textarea>
             </div>
 
             <div class="input-field-group">
