@@ -79,7 +79,7 @@ const CLASS_DATA = {
       title: "2026학년도 우리 반 출발 🌸",
       date: "2026-03-10",
       tag: "소식",
-      summary: "우리 반 6명 친구들과 함께 즐거운 학교 생활을 시작해요!"
+      summary: "우리 반 7명 친구들과 함께 즐거운 학교 생활을 시작해요!"
     },
     {
       id: "issue-2",
@@ -110,32 +110,32 @@ const CLASS_DATA = {
         {
           id: 1,
           imgUrl: "./images/20104/20104_drawing 1.png",
-          motivation: "내가 가장 좋아하는 캐릭터와 힐링되는 순간을 표현하고 싶어서 그리게 되었습니다.",
-          story: "마음이 편안해지는 유쾌하고 귀여운 그림입니다. 밝은 색감과 개성 있는 선 표현이 인상적입니다."
+          motivation: "김정림촤연헤",
+          story: "정림이가 가장 좋아하는 친구입니다. 이름은 쉿! 비밀이에요."
         },
         {
           id: 2,
           imgUrl: "./images/20104/20104_drawing 2.png",
-          motivation: "상상 속의 즐거운 풍경을 정성스럽게 담았습니다.",
-          story: "자유로운 표현력과 솔직한 감정이 돋보이는 작품입니다."
+          motivation: "♥",
+          story: "좋아하는 선생님이래요. 어쩌면 나를 그린 게 아닐까 생각합니다."
         },
         {
           id: 3,
           imgUrl: "./images/20104/20104_drawing 3.png",
-          motivation: "친구들과 함께 나눈 행복한 기억에서 아이디어를 얻었습니다.",
-          story: "아기자기한 분위기로 마음을 따뜻하게 만들어주는 소중한 그림입니다."
+          motivation: "ㅑ호갸ㅔㅕ",
+          story: "좋아하는 선생님일까? 좋아하는 친구일까? "
         },
         {
           id: 4,
           imgUrl: "./images/20104/20104_drawing 4.png",
-          motivation: "좋아하는 동식물의 다정한 모습을 스케치했습니다.",
-          story: "손끝에서 묻어나는 섬세함이 돋보입니다."
+          motivation: "★",
+          story: "좋아하는 친구에요. 정림이 마음 속 누가 있는걸까요~~?"
         },
         {
           id: 5,
           imgUrl: "./images/20104/20104_drawing 5.png",
-          motivation: "내 마음속 작은 보물상자를 상상하며 그렸습니다.",
-          story: "단순하지만 강렬한 인상을 주는 개성 넘치는 드로잉입니다."
+          motivation: "☆",
+          story: "정림이가 자주 말하는 단어 중에 하나입니다. 다이소에서 쇼핑을 좋아하나봐요."
         }
       ]
     },
@@ -152,26 +152,26 @@ const CLASS_DATA = {
         {
           id: 1,
           imgUrl: "./images/20105/20105_drawing 1.png",
-          motivation: "신나는 음악을 들을 때 느껴지는 감정을 그림으로 옮겼습니다.",
-          story: "리드미컬하고 율동감이 느껴지는 예쁜 손그림입니다."
+          motivation: "귀여운 난타. 스트레스가 쌓일 때 풀리는 악기",
+          story: "오랫동안 복지관에서 난타를 쳐서 실력이 베테랑입니다."
         },
         {
           id: 2,
           imgUrl: "./images/20105/20105_drawing 2.png",
-          motivation: "내가 바라는 멋진 모습과 내일을 표현하고자 했습니다.",
-          story: "희망차고 화사한 분위기가 보는 사람을 미소 짓게 합니다."
+          motivation: "무시무시한 악마다. 리듬게임으로 랩배틀로 승부를 냇다",
+          story: "너무 귀여운 악마네요. 리듬 게임에 나오는 캐릭터라고 합니다."
         },
         {
           id: 3,
           imgUrl: "./images/20105/20105_drawing 3.png",
-          motivation: "좋아하는 계절의 햇살을 정성껏 그린 그림입니다.",
-          story: "포근한 색채 감각이 잘 드러나 있는 아기자기한 작품입니다."
+          motivation: "말차는 제일 좋아합니다 귀여온 고양이로 그려지다",
+          story: "하음이는 말차 초콜릿, 말차 빵 등등 말차 들어간 모든 것을 다 좋아해요."
         },
         {
           id: 4,
           imgUrl: "./images/20105/20105_drawing 4.png",
-          motivation: "귀여운 동물의 정겨운 한때를 관찰하여 그렸습니다.",
-          story: "사랑스럽고 정성이 듬뿍 들어간 그림입니다."
+          motivation: "리코더는 제일 좋아합니다 이를 리코짱! 뀨하",
+          story: "하음이는 좋아하는 물건에 항상 별명을 지어줍니다. "내 리코짱 어디있지?" 찾아헤맵니다. "뀨하"는 하음이의 부캐가 내는 귀여운 소리입니다."
         },
         {
           id: 5,
@@ -182,8 +182,8 @@ const CLASS_DATA = {
         {
           id: 6,
           imgUrl: "./images/20105/20105_drawing 6.png",
-          motivation: "미래의 나의 보금자리를 상상하며 완성했습니다.",
-          story: "따뜻하고 아늑한 풍경을 자아내는 감성적인 그림입니다."
+          motivation: "가끔씩 스트레스가 생기면 유트부로 노래를 듣고 풀리다",
+          story: "게임 중에서도 음악과 관련된 게임을 참 좋아합니다."
         }
       ]
     },
@@ -278,14 +278,14 @@ const CLASS_DATA = {
         {
           id: 1,
           imgUrl: "./images/20616/20616_drawing 1.png",
-          motivation: "나만의 소중한 목표와 꿈을 형상화하고 싶었습니다.",
-          story: "선명하고 단단한 선 표현에 성윤이의 정성이 깊게 배어있습니다."
+          motivation: "여름 안에서 듀스 스탠딩에그 오래된 노래 너에게난 나에게 넌 자전거 탄 풍경 경서 나의 X에게 밤하늘의 별을 핸드폰 듣는게 좋아요 ",
+          story: "쉬는 시간에 항상 이어폰 꽂고 노래 듣기를 좋아합니다. 가요를 꽤 많이 알고 있어요."
         },
         {
           id: 2,
           imgUrl: "./images/20616/20616_drawing 2.png",
-          motivation: "즐거운 학교 생활 중 기억에 남는 장면을 그렸습니다.",
-          story: "밝은 에너지와 순수한 감동을 전해주는 감성적 아트워크입니다."
+          motivation: "피아노 좋아해요",
+          story: "음악을 좋아하는 건 알았지만 피아노를 좋아하는지 몰랐네요."
         }
       ]
     },
@@ -334,6 +334,24 @@ const CLASS_DATA = {
           imgUrl: "./images/20625/20625_drawing 6.png",
           motivation: "대작 완성의 기쁨을 담아 정성껏 마감한 작품입니다.",
           story: "풍부한 묘사와 깊이 있는 표현이 돋보이는 완성도 높은 그림입니다."
+        }
+      ]
+    },
+
+    "20419": {
+      id: "20419",
+      number: "20419",
+      name: "김시훈",
+      introKeyword: "꿈을 키우는 친구",
+      centerStudentImg: "./images/20419/20419_center student_nobg.png",
+      centerNameImg: "./images/20419/20419_center name.png",
+      bgColor: "#FAF8F5",
+      drawings: [
+        {
+          id: 1,
+          imgUrl: "./images/20419/20419_drawing 1.png",
+          motivation: "정성을 다해 완성한 나만의 첫 번째 작품입니다.",
+          story: "솔직한 표현과 맑은 감성이 돋보이는 소중한 손그림입니다."
         }
       ]
     }

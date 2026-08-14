@@ -16,7 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let studentId = urlParams.get('id');
 
   if (!studentId || !CLASS_DATA.students[studentId]) {
-    studentId = studentKeys[0];
+    if (studentId === '201419' && CLASS_DATA.students['20419']) {
+      studentId = '20419';
+    } else {
+      studentId = studentKeys[0];
+    }
   }
 
   activeStudentId = studentId;
@@ -37,19 +41,29 @@ function renderStudentProfile(student) {
   const centerNameImg = document.getElementById('centerNameImg');
   const centerNameFallback = document.getElementById('centerNameFallback');
 
-  centerStudentImg.src = student.centerStudentImg;
+  centerStudentImg.src = student.centerStudentImg || './images/template.png';
   centerStudentImg.alt = `${student.name} 프로필`;
   centerStudentImg.onerror = () => {
-    centerStudentImg.src = student.centerStudentImg.replace('_nobg.png', '.png');
+    if (centerStudentImg.src.includes('_nobg.png')) {
+      centerStudentImg.src = student.centerStudentImg.replace('_nobg.png', '.png');
+    } else if (!centerStudentImg.src.includes('template.png')) {
+      centerStudentImg.src = './images/template.png';
+    }
   };
 
   if (student.centerNameImg) {
+    centerNameImg.style.display = 'block';
+    centerNameFallback.style.display = 'none';
     centerNameImg.src = student.centerNameImg;
     centerNameImg.alt = `${student.name} 이름`;
     centerNameImg.onerror = () => {
-      centerNameImg.style.display = 'none';
-      centerNameFallback.style.display = 'inline-block';
-      centerNameFallback.textContent = student.name;
+      if (centerNameImg.src.includes('center%20name.png') || centerNameImg.src.includes('center name.png')) {
+        centerNameImg.src = student.centerNameImg.replace('center name.png', 'center name 2.png');
+      } else {
+        centerNameImg.style.display = 'none';
+        centerNameFallback.style.display = 'inline-block';
+        centerNameFallback.textContent = student.name;
+      }
     };
   } else {
     centerNameImg.style.display = 'none';
