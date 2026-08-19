@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우리 반 단체 추억 갤러리 | 크게 보기</title>
+  <meta name="description" content="금천고 학급 단체 추억 사진을 온전하게 크게 감상하세요.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="gallery-page-body">
+
+  <!-- Header Navigation -->
+  <header class="student-page-header gallery-header">
+    <a href="main.html#group-gallery" class="back-btn">
+      <span>⬅</span> 메인 홈으로
+    </a>
+
+    <div class="student-selector-nav">
+      <button id="prevGalleryBtn" class="student-nav-btn">◀ 이전 추억</button>
+      <button id="nextGalleryBtn" class="student-nav-btn">다음 추억 ▶</button>
+    </div>
+  </header>
+
+  <!-- Main Gallery Viewport -->
+  <main class="gallery-viewport">
+    <div class="gallery-container">
+      
+      <!-- Top Title Area -->
+      <div class="gallery-title-group">
+        <span class="gallery-badge" id="galleryBadge">📸 학급 단체 추억 #1</span>
+        <h1 class="gallery-main-title" id="galleryTitle">함께해서 더 즐거운 우리 반</h1>
+      </div>
+
+      <!-- Center Large Uncropped Photo Frame -->
+      <div class="full-photo-frame">
+        <img id="galleryFullImg" src="" alt="학급 단체 사진 크게 보기" class="full-photo-img" onerror="this.src='./images/template.png';">
+      </div>
+
+      <!-- Bottom Caption / Story Box -->
+      <div class="gallery-caption-box">
+        <div class="gallery-caption-text" id="galleryDesc">
+          우리 반 7명 친구들이 함께 웃으며 찍은 소중한 단체 추억 사진입니다.
+        </div>
+        <div class="gallery-pagination" id="galleryPagination">
+          1 / 3
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript Scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/gallery.js"></script>
+
+</body>
+</html>

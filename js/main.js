@@ -34,9 +34,10 @@ function renderGroupGallerySection() {
 
   const images = CLASS_DATA.groupImages;
   container.innerHTML = images.map((img, idx) => `
-    <div class="group-card">
+    <div class="group-card clickable-group-card" onclick="location.href='gallery.html?id=${img.id}'" title="${img.title} - 온전한 사진 크게 보기">
       <div class="group-img-wrapper">
         <img src="${img.url}" alt="${img.title}" class="group-img" onerror="this.src='./images/template.png';">
+        <span class="group-zoom-badge">🔍 크게 보기</span>
       </div>
       <div class="group-card-caption">
         <span>🌸 ${img.title}</span>

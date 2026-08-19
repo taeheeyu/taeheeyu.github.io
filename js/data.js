@@ -31,17 +31,20 @@ const CLASS_DATA = {
     {
       id: 1,
       title: "함께해서 더 즐거운 우리 반",
-      url: "./images/cute version/group image 1.png"
+      url: "./images/cute version/group image 1.png",
+      description: "우리 반 7명 친구들이 함께 웃으며 찍은 소중한 첫 번째 단체 추억 사진입니다."
     },
     {
       id: 2,
       title: "몸과 마음을 가꾸는 학급",
-      url: "./images/cute version/group image 2.png"
+      url: "./images/cute version/group image 2.png",
+      description: "다양한 학급 활동과 체험을 함께하며 몸과 마음의 성장을 다지는 두 번째 단체 추억 사진입니다."
     },
     {
       id: 3,
       title: "새로운 경험과 익숙한 경험의 조화",
-      url: "./images/cute version/group image 3.png"
+      url: "./images/cute version/group image 3.png",
+      description: "새로운 도전과 즐거운 일상을 공유하며 조화롭게 피어나는 세 번째 단체 추억 사진입니다."
     }
   ],
 
@@ -269,13 +272,13 @@ const CLASS_DATA = {
         },
         {
           id: 2,
-          imgUrl: "./images/20413/20413_drawing 2.jpg",
+          imgUrl: "./images/20413/20413_drawing 2.png",
           motivation: "일상 속 소소한 기쁨을 담아내고자 그렸습니다.",
           story: "솔직하고 다정한 시선이 느껴지는 그림입니다."
         },
         {
           id: 3,
-          imgUrl: "./images/20413/ChatGPT Image 2026년 7월 1일 오전 09_38_10.png",
+          imgUrl: "./images/20413/20413_drawing 3.png",
           motivation: "디지털 기술과 나의 상상력을 결합하여 창작해낸 작품입니다.",
           story: "풍부한 색감과 신비로운 감성이 조화롭게 어우러집니다."
         }
@@ -302,6 +305,12 @@ const CLASS_DATA = {
           imgUrl: "./images/20616/20616_drawing 2.png",
           motivation: "피아노 좋아해요",
           story: "음악을 좋아하는 건 알았지만 피아노를 좋아하는지 몰랐네요."
+        },
+        {
+          id: 3,
+          imgUrl: "./images/20616/20616_drawing 3.png",
+          motivation: "정성을 다해 완성한 나만의 세 번째 작품입니다.",
+          story: "마음을 담아 정성껏 완성한 소중한 손그림 작품입니다."
         }
       ]
     },
@@ -368,6 +377,36 @@ const CLASS_DATA = {
           imgUrl: "./images/20419/20419_drawing 1.png",
           motivation: "정성을 다해 완성한 나만의 첫 번째 작품입니다.",
           story: "솔직한 표현과 맑은 감성이 돋보이는 소중한 손그림입니다."
+        },
+        {
+          id: 2,
+          imgUrl: "./images/20419/20419_drawing 2.png",
+          motivation: "정성을 다해 완성한 나만의 두 번째 작품입니다.",
+          story: "자유로운 표현과 밝은 느낌이 담긴 손그림입니다."
+        },
+        {
+          id: 3,
+          imgUrl: "./images/20419/20419_drawing 3.png",
+          motivation: "정성을 다해 완성한 나만의 세 번째 작품입니다.",
+          story: "새로운 시도와 따뜻한 마음이 담긴 손그림입니다."
+        },
+        {
+          id: 4,
+          imgUrl: "./images/20419/20419_drawing 4.png",
+          motivation: "정성을 다해 완성한 나만의 네 번째 작품입니다.",
+          story: "개성이 돋보이는 소중한 손그림입니다."
+        },
+        {
+          id: 5,
+          imgUrl: "./images/20419/20419_drawing 5.png",
+          motivation: "정성을 다해 완성한 나만의 다섯 번째 작품입니다.",
+          story: "정성 가득한 필치와 따뜻한 색감이 어우러진 작품입니다."
+        },
+        {
+          id: 6,
+          imgUrl: "./images/20419/20419_drawing 6.png",
+          motivation: "정성을 다해 완성한 나만의 여섯 번째 작품입니다.",
+          story: "마음을 담아 정성껏 완성한 멋진 손그림입니다."
         }
       ]
     }
