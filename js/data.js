@@ -11,6 +11,22 @@ const CLASS_DATA = {
     heroBadge: "2026학년도 금천고"
   },
 
+  // 랜딩 페이지의 단체 그림과 마우스 오버 영역입니다.
+  // tooltip 값을 수정하면 각 영역에 표시되는 문구를 바꿀 수 있습니다.
+  landingPage: {
+    imageUrl: "./images/main group image.png",
+    imageAlt: "벚꽃 아래 함께 있는 금천고등학교 학생들",
+    hotspots: [
+      { id: "sihoon", tooltip: "김시훈", x: 8.43, y: 42.40, width: 12.80, height: 35.92 },
+      { id: "jeongrim-hana", tooltip: "김정림과 임하나", x: 34.75, y: 67.48, width: 16.39, height: 30.29 },
+      { id: "haeum-seongho", tooltip: "김하음과 이성호", x: 53.23, y: 49.20, width: 19.98, height: 22.10 },
+      { id: "seongyun", tooltip: "김성윤", x: 54.01, y: 71.63, width: 9.21, height: 25.19 },
+      { id: "seheon", tooltip: "정세헌", x: 64.77, y: 72.26, width: 7.72, height: 23.80 },
+      { id: "yehwan-byeongwoo", tooltip: "최예환과 박병우", x: 74.04, y: 56.64, width: 13.28, height: 24.00 },
+      { id: "jihwan", tooltip: "홍지환", x: 80.00, y: 76.00, width: 6.50, height: 21.50 }
+    ]
+  },
+
   groupImages: [
     {
       id: 1,
