@@ -7,8 +7,16 @@
   <style>
     html, body { margin: 0; min-height: 100%; }
     body { display: grid; min-height: 100vh; place-items: center; background: #fff; }
-    a { display: block; line-height: 0; }
-    img { display: block; width: min(100vw, 1672px); height: auto; max-height: 100vh; object-fit: contain; }
+    .landing-stage { position: relative; width: min(100vw, calc(100vh * 1.7768), 1672px); aspect-ratio: 1672 / 941; }
+    .landing-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .landing-full-link { position: absolute; inset: 0; z-index: 1; }
+    .landing-hotspots { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+    .landing-hotspot { position: absolute; left: var(--x); top: var(--y); width: var(--width); height: var(--height); display: block; border: 1px solid transparent; border-radius: 20px; cursor: pointer; pointer-events: auto; transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .landing-hotspot:hover, .landing-hotspot:focus-visible { background: rgba(255, 227, 235, .26); border-color: rgba(210, 135, 158, .6); box-shadow: 0 5px 16px rgba(177, 113, 135, .14), inset 0 0 0 1px rgba(255, 255, 255, .52); outline: none; }
+    .hotspot-tooltip { position: absolute; left: 50%; top: -10px; min-width: max-content; max-width: min(220px, 76vw); padding: 7px 11px; border: 1px solid rgba(208, 157, 131, .32); border-radius: 12px; background: rgba(255, 253, 248, .96); box-shadow: 0 5px 16px rgba(113, 83, 68, .14); color: #5e4540; font: 600 clamp(.75rem, 1.5vw, .92rem)/1.3 'Noto Sans KR', sans-serif; line-height: 1.35; text-align: center; white-space: normal; transform: translate(-50%, -100%) translateY(4px); opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
+    .landing-hotspot:hover .hotspot-tooltip, .landing-hotspot:focus-visible .hotspot-tooltip, .landing-hotspot.is-tooltip-open .hotspot-tooltip { transform: translate(-50%, -100%); opacity: 1; visibility: visible; }
+    .landing-hotspot.is-tooltip-open { background: rgba(255, 227, 235, .26); border-color: rgba(210, 135, 158, .6); box-shadow: 0 5px 16px rgba(177, 113, 135, .14), inset 0 0 0 1px rgba(255, 255, 255, .52); }
+    @media (max-width: 767px), (hover: none) and (pointer: coarse) { .hotspot-tooltip { padding: 6px 9px; border-radius: 10px; } }
     .cherry-blossom-layer { position: fixed; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
     .cherry-petal { --petal-color: #f7b7c6; position: absolute; top: -32px; left: var(--left); width: var(--size); height: calc(var(--size) * .76); border-radius: 75% 15% 75% 15%; background: var(--petal-color); box-shadow: inset -2px -2px 2px rgba(202, 92, 122, .18); opacity: .8; animation: cherry-petal-fall var(--duration) linear var(--delay) infinite; }
     .cherry-petal:nth-child(3n) { --petal-color: #ffd4df; opacity: .9; }
@@ -18,9 +26,11 @@
   </style>
 </head>
 <body>
-  <a href="main.html" aria-label="학급 소개 메인 페이지로 이동">
-    <img src="images/main%20group%20image.png" alt="금천고등학교 학급 소개">
-  </a>
+  <main class="landing-stage" aria-label="금천고등학교 학급 소개 랜딩 페이지">
+    <img id="landingImage" class="landing-image" src="images/main%20group%20image.png" alt="벚꽃 아래 함께 있는 금천고등학교 학생들">
+    <a class="landing-full-link" href="main.html" aria-label="학급 소개 메인 페이지로 이동"></a>
+    <div id="landingHotspots" class="landing-hotspots" aria-label="학생 소개 영역"></div>
+  </main>
   <div class="cherry-blossom-layer" aria-hidden="true">
     <span class="cherry-petal" style="--left: 4%; --size: 12px; --duration: 12s; --delay: -8s; --drift: 18vw;"></span>
     <span class="cherry-petal" style="--left: 11%; --size: 9px; --duration: 15s; --delay: -3s; --drift: 28vw;"></span>
@@ -35,5 +45,7 @@
     <span class="cherry-petal" style="--left: 88%; --size: 14px; --duration: 16s; --delay: -12s; --drift: 8vw;"></span>
     <span class="cherry-petal" style="--left: 96%; --size: 11px; --duration: 11s; --delay: -5s; --drift: 19vw;"></span>
   </div>
+  <script src="./js/data.js"></script>
+  <script src="./js/landing.js"></script>
 </body>
 </html>
