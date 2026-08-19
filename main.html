@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>금천고 학급 소개 | 우리 반을 소개합니다</title>
+  <meta name="description" content="금천고등학교 7명 학생들의 자기소개, 학급 교육 내용 및 다양한 활동 소식을 만나보세요.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-group">
+        <span class="logo-badge" id="schoolBadge">금천고</span>
+        <h1 class="logo-title" id="siteLogoTitle">우리 반을 소개합니다</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#group-gallery" class="nav-link">학급 추억</a>
+        <a href="#students" class="nav-link">학생 소개</a>
+        <a href="#education" class="nav-link">교육 내용</a>
+        <a href="#issues" class="nav-link">주요 이슈</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <span class="hero-subtitle-badge" id="heroBadge">2026학년도 금천고등학교</span>
+        <h2 class="hero-title" id="heroTitle">함께 꿈꾸고 성장하는 우리들의 이야기</h2>
+        <p class="hero-desc" id="heroDesc">
+          7명의 소중한 친구들이 각자의 개성과 열정으로 만들어가는 따뜻한 학급 공간입니다.<br>
+          다양한 교육 활동과 손그림 속에 담긴 다정한 시선을 확인해보세요!
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Group Images Section (학급 추억) -->
+    <section id="group-gallery" class="section-block group-gallery-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">📸</span>
+          <h2 class="section-title">우리 반 단체 추억 갤러리</h2>
+        </div>
+        
+        <div class="group-grid" id="groupGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Student Intro Section (학생 소개 - 교육 내용보다 앞으로 배치) -->
+    <section id="students" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">🎨</span>
+          <h2 class="section-title">우리 반 학생 소개 (7명)</h2>
+        </div>
+        
+        <div class="student-grid" id="studentGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Education Section (교육 내용) -->
+    <section id="education" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">📚</span>
+          <h2 class="section-title">학급 교육 활동</h2>
+        </div>
+        
+        <div class="edu-grid" id="eduGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Main Issues Section (주요 이슈) -->
+    <section id="issues" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">📌</span>
+          <h2 class="section-title">학급 주요 소식</h2>
+        </div>
+        
+        <div class="issues-grid" id="issuesGridContainer">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 금천고등학교 학급 소개 페이지 | 모든 손그림과 활동 기록은 학생들의 정성으로 제작되었습니다.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+</html>

@@ -3,113 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>금천고 학급 소개 | 우리 반을 소개합니다</title>
-  <meta name="description" content="금천고등학교 7명 학생들의 자기소개, 학급 교육 내용 및 다양한 활동 소식을 만나보세요.">
-  
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="./css/style.css">
+  <title>금천고등학교</title>
+  <style>
+    html, body { margin: 0; min-height: 100%; }
+    body { display: grid; min-height: 100vh; place-items: center; background: #fff; }
+    a { display: block; line-height: 0; }
+    img { display: block; width: min(100vw, 1672px); height: auto; max-height: 100vh; object-fit: contain; }
+    .cherry-blossom-layer { position: fixed; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
+    .cherry-petal { --petal-color: #f7b7c6; position: absolute; top: -32px; left: var(--left); width: var(--size); height: calc(var(--size) * .76); border-radius: 75% 15% 75% 15%; background: var(--petal-color); box-shadow: inset -2px -2px 2px rgba(202, 92, 122, .18); opacity: .8; animation: cherry-petal-fall var(--duration) linear var(--delay) infinite; }
+    .cherry-petal:nth-child(3n) { --petal-color: #ffd4df; opacity: .9; }
+    .cherry-petal:nth-child(4n) { --petal-color: #ee9eb3; opacity: .7; }
+    @keyframes cherry-petal-fall { 0% { transform: translate3d(0, -12vh, 0) rotate(0deg); } 35% { transform: translate3d(calc(var(--drift) * .65), 30vh, 0) rotate(185deg); } 70% { transform: translate3d(calc(var(--drift) * .25), 68vh, 0) rotate(395deg); } 100% { transform: translate3d(var(--drift), 115vh, 0) rotate(600deg); } }
+    @media (prefers-reduced-motion: reduce) { .cherry-petal { animation: none; opacity: 0; } }
+  </style>
 </head>
 <body>
-
-  <!-- Site Header & Navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo-group">
-        <span class="logo-badge" id="schoolBadge">금천고</span>
-        <h1 class="logo-title" id="siteLogoTitle">우리 반을 소개합니다</h1>
-      </div>
-      <nav class="main-nav">
-        <a href="#group-gallery" class="nav-link">학급 추억</a>
-        <a href="#students" class="nav-link">학생 소개</a>
-        <a href="#education" class="nav-link">교육 내용</a>
-        <a href="#issues" class="nav-link">주요 이슈</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <span class="hero-subtitle-badge" id="heroBadge">2026학년도 금천고등학교</span>
-        <h2 class="hero-title" id="heroTitle">함께 꿈꾸고 성장하는 우리들의 이야기</h2>
-        <p class="hero-desc" id="heroDesc">
-          7명의 소중한 친구들이 각자의 개성과 열정으로 만들어가는 따뜻한 학급 공간입니다.<br>
-          다양한 교육 활동과 손그림 속에 담긴 다정한 시선을 확인해보세요!
-        </p>
-      </div>
-    </section>
-
-    <!-- 1. Group Images Section (학급 추억) -->
-    <section id="group-gallery" class="section-block group-gallery-block">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-icon">📸</span>
-          <h2 class="section-title">우리 반 단체 추억 갤러리</h2>
-        </div>
-        
-        <div class="group-grid" id="groupGridContainer">
-          <!-- Rendered dynamically by js/main.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. Student Intro Section (학생 소개 - 교육 내용보다 앞으로 배치) -->
-    <section id="students" class="section-block">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-icon">🎨</span>
-          <h2 class="section-title">우리 반 학생 소개 (7명)</h2>
-        </div>
-        
-        <div class="student-grid" id="studentGridContainer">
-          <!-- Rendered dynamically by js/main.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Education Section (교육 내용) -->
-    <section id="education" class="section-block">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-icon">📚</span>
-          <h2 class="section-title">학급 교육 활동</h2>
-        </div>
-        
-        <div class="edu-grid" id="eduGridContainer">
-          <!-- Rendered dynamically by js/main.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Main Issues Section (주요 이슈) -->
-    <section id="issues" class="section-block">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-icon">📌</span>
-          <h2 class="section-title">학급 주요 소식</h2>
-        </div>
-        
-        <div class="issues-grid" id="issuesGridContainer">
-          <!-- Rendered dynamically by js/main.js -->
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 금천고등학교 학급 소개 페이지 | 모든 손그림과 활동 기록은 학생들의 정성으로 제작되었습니다.</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript Scripts -->
-  <script src="./js/data.js"></script>
-  <script src="./js/main.js"></script>
-
+  <a href="main.html" aria-label="학급 소개 메인 페이지로 이동">
+    <img src="images/main%20group%20image.png" alt="금천고등학교 학급 소개">
+  </a>
+  <div class="cherry-blossom-layer" aria-hidden="true">
+    <span class="cherry-petal" style="--left: 4%; --size: 12px; --duration: 12s; --delay: -8s; --drift: 18vw;"></span>
+    <span class="cherry-petal" style="--left: 11%; --size: 9px; --duration: 15s; --delay: -3s; --drift: 28vw;"></span>
+    <span class="cherry-petal" style="--left: 19%; --size: 14px; --duration: 13s; --delay: -11s; --drift: 13vw;"></span>
+    <span class="cherry-petal" style="--left: 28%; --size: 10px; --duration: 16s; --delay: -6s; --drift: 24vw;"></span>
+    <span class="cherry-petal" style="--left: 36%; --size: 13px; --duration: 11s; --delay: -1s; --drift: 17vw;"></span>
+    <span class="cherry-petal" style="--left: 45%; --size: 8px; --duration: 14s; --delay: -9s; --drift: 31vw;"></span>
+    <span class="cherry-petal" style="--left: 54%; --size: 15px; --duration: 17s; --delay: -4s; --drift: 11vw;"></span>
+    <span class="cherry-petal" style="--left: 63%; --size: 10px; --duration: 12s; --delay: -10s; --drift: 26vw;"></span>
+    <span class="cherry-petal" style="--left: 71%; --size: 12px; --duration: 15s; --delay: -7s; --drift: 14vw;"></span>
+    <span class="cherry-petal" style="--left: 80%; --size: 9px; --duration: 13s; --delay: -2s; --drift: 22vw;"></span>
+    <span class="cherry-petal" style="--left: 88%; --size: 14px; --duration: 16s; --delay: -12s; --drift: 8vw;"></span>
+    <span class="cherry-petal" style="--left: 96%; --size: 11px; --duration: 11s; --delay: -5s; --drift: 19vw;"></span>
+  </div>
 </body>
 </html>
