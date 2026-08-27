@@ -27,7 +27,7 @@ function renderClassHeaderInfo() {
   if (heroBadge) heroBadge.textContent = `${info.heroBadge} | ${info.gradeClass}`;
 }
 
-// 1. 단체 추억 갤러리 섹션 렌더링 (group image 1~3)
+// 1. 단체 추억 갤러리 섹션 렌더링 (group image 1~6)
 function renderGroupGallerySection() {
   const container = document.getElementById('groupGridContainer');
   if (!container || !CLASS_DATA.groupImages) return;

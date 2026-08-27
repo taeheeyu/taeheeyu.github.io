@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gaegu:wght@300;400;700&family=Gamja+Flower&family=Hi+Melody&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700&family=Single+Day&display=swap');
 
 /* ==========================================================================
    1. Design System & CSS Variables
@@ -21,6 +21,7 @@
   --shadow-paper: 0 6px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
   --shadow-hover: 0 12px 26px rgba(0, 0, 0, 0.12);
 
+  --font-student: 'Single Day', 'Gamja Flower', 'Cute Font', cursive;
   --font-hand: 'Gaegu', 'Nanum Pen Script', cursive;
   --font-pen: 'Nanum Pen Script', cursive;
   --font-body: 'Noto Sans KR', sans-serif;
@@ -330,6 +331,8 @@ a {
   font-size: 1.8rem;
   font-weight: 700;
   color: #3E2723;
+  word-break: keep-all;
+  line-height: 1.25;
 }
 
 .edu-badge {
@@ -536,30 +539,42 @@ a {
 }
 
 .student-page-header {
-  height: 52px;
-  padding: 6px 20px;
+  min-height: 56px;
+  padding: 6px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #EAE0D0;
   z-index: 50;
   flex-shrink: 0;
 }
 
-.back-btn {
+.back-btn,
+.student-nav-btn {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  text-align: center;
   font-family: var(--font-hand);
-  font-size: 1.2rem;
   font-weight: 700;
-  color: #4A3B32;
-  background: #FFF0D4;
-  padding: 4px 16px;
-  border-radius: 18px;
+  padding: 4px 14px;
+  border-radius: 16px;
   transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1.1;
+  text-decoration: none;
+  border: 1.5px solid #DCD0BF;
+  background: #FFFFFF;
+  color: #4A3B32;
+  box-sizing: border-box;
+}
+
+.back-btn {
+  background: #FFF0D4;
+  border-color: #F5E0C2;
 }
 
 .back-btn:hover {
@@ -569,22 +584,23 @@ a {
 .student-selector-nav {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.student-nav-btn {
-  font-family: var(--font-hand);
-  font-size: 1.1rem;
-  font-weight: 700;
-  background: #FFFFFF;
-  border: 1.5px solid #DCD0BF;
-  padding: 4px 12px;
-  border-radius: 16px;
-  cursor: pointer;
+  gap: 8px;
 }
 
 .student-nav-btn:hover {
   background: #F5EBDC;
+}
+
+.nav-btn-text {
+  font-size: 1.05rem;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.nav-btn-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+  margin-top: 2px;
 }
 
 /* Main Viewport Stage */
@@ -908,6 +924,16 @@ a {
   white-space: pre-line;
 }
 
+/* 학생 작성 그림 관련 이야기 (귀여운 동글동글한 손글씨 폰트 적용) */
+.story-block:not(.teacher-block) .modal-block-desc,
+#modalStory {
+  font-family: var(--font-student);
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #2C1810;
+  line-height: 1.5;
+}
+
 /* Story Header & Inline Editor for Keyboard/Tablet Story Input */
 .story-header-group {
   display: flex;
@@ -979,9 +1005,9 @@ a {
 
 .story-textarea {
   width: 100%;
-  font-family: var(--font-hand);
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-family: var(--font-student);
+  font-size: 1.45rem;
+  font-weight: 400;
   color: #3E2723;
   border: 1.5px solid #E0D0B8;
   border-radius: var(--radius-sm);
@@ -993,6 +1019,9 @@ a {
 }
 
 .story-textarea.teacher-textarea {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
   background: #FFFDE7;
   border-color: #FFE082;
 }

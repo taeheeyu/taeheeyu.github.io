@@ -282,12 +282,12 @@ function setupNavigationButtons(currentId, studentKeys) {
   const nextStudent = CLASS_DATA.students[studentKeys[nextIndex]];
 
   if (prevBtn) {
-    prevBtn.textContent = `◀ ${prevStudent.name}`;
+    prevBtn.innerHTML = `<span class="nav-btn-text">${prevStudent.name}</span><span class="nav-btn-icon">◀</span>`;
     prevBtn.onclick = () => window.location.href = `student.html?id=${prevStudent.id}`;
   }
 
   if (nextBtn) {
-    nextBtn.textContent = `${nextStudent.name} ▶`;
+    nextBtn.innerHTML = `<span class="nav-btn-text">${nextStudent.name}</span><span class="nav-btn-icon">▶</span>`;
     nextBtn.onclick = () => window.location.href = `student.html?id=${nextStudent.id}`;
   }
 }

@@ -49,12 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextId = currentPhoto.id < totalCount ? currentPhoto.id + 1 : 1;
 
   if (prevBtn) {
+    prevBtn.innerHTML = `<span class="nav-btn-text">이전 추억</span><span class="nav-btn-icon">◀</span>`;
     prevBtn.addEventListener('click', () => {
       window.location.href = `gallery.html?id=${prevId}`;
     });
   }
 
   if (nextBtn) {
+    nextBtn.innerHTML = `<span class="nav-btn-text">다음 추억</span><span class="nav-btn-icon">▶</span>`;
     nextBtn.addEventListener('click', () => {
       window.location.href = `gallery.html?id=${nextId}`;
     });

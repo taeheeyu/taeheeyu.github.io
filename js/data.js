@@ -32,19 +32,37 @@ const CLASS_DATA = {
       id: 1,
       title: "함께해서 더 즐거운 우리 반",
       url: "./images/cute version/group image 1.png",
-      description: "우리 반 7명 친구들이 함께 웃으며 찍은 소중한 첫 번째 단체 추억 사진입니다."
+      description: "6월 4일 신나는 댄스 공연 관람 후에"
     },
     {
       id: 2,
       title: "몸과 마음을 가꾸는 학급",
       url: "./images/cute version/group image 2.png",
-      description: "다양한 학급 활동과 체험을 함께하며 몸과 마음의 성장을 다지는 두 번째 단체 추억 사진입니다."
+      description: "3월 24일 학교 뒷산에 올라 이른 봄을 맞이하며"
     },
     {
       id: 3,
-      title: "새로운 경험과 익숙한 경험의 조화",
+      title: "새로운 경험과 일상의 조화",
       url: "./images/cute version/group image 3.png",
-      description: "새로운 도전과 즐거운 일상을 공유하며 조화롭게 피어나는 세 번째 단체 추억 사진입니다."
+      description: "4월 21일 청계천을 산책하며"
+    },
+    {
+      id: 4,
+      title: "소중한 추억을 나누는 시간",
+      url: "./images/cute version/group image 4.png",
+      description: "우리 반 친구들과 함께한 소중하고 즐거운 단체 추억"
+    },
+    {
+      id: 5,
+      title: "서로 도우며 성장하는 행복한 교실",
+      url: "./images/cute version/group image 5.png",
+      description: "서로를 응원하며 기쁨을 나누는 학급 활동에서"
+    },
+    {
+      id: 6,
+      title: "웃음꽃 피어나는 따뜻한 기억",
+      url: "./images/cute version/group image 6.png",
+      description: "언제나 마음에 남을 우리들의 따뜻한 단체 사진"
     }
   ],
 
@@ -52,10 +70,10 @@ const CLASS_DATA = {
   education: [
     {
       id: "baking",
-      title: "제과제빵",
+      title: "제과<br>제빵",
       icon: "🍞",
       badge: "실습",
-      location: "조리실습실",
+      location: "상암고",
       schedule: "1학기 매주 화요일",
       activity: "🧁 맛있는 빵과 쿠키 만들기",
       images: []
@@ -75,7 +93,7 @@ const CLASS_DATA = {
       title: "이미지 메이킹",
       icon: "✨",
       badge: "자기계발",
-      location: "특별활동실",
+      location: "관악고",
       schedule: "2학기 매주 금요일",
       activity: "🪞 예쁜 미소와 자신감 가꾸기",
       images: []
@@ -85,7 +103,7 @@ const CLASS_DATA = {
       title: "핸드벨 음악",
       icon: "🔔",
       badge: "음악",
-      location: "음악실",
+      location: "청소년센터",
       schedule: "1,2학기 매주 화요일",
       activity: "🎵 맑은 종소리 멜로디 연주",
       images: []
@@ -109,10 +127,10 @@ const CLASS_DATA = {
     },
     {
       id: "issue-3",
-      title: "핸드벨 미니 음악회 🔔",
-      date: "2026-04-15",
-      tag: "행사",
-      summary: "친구들과 마음을 모아 예쁜 음악 멜로디를 준비해요."
+      title: "핸드벨 수업 시작 🔔",
+      date: "2026-03-24",
+      tag: "소식",
+      summary: "서로 다른 음이 조화롭게 어우러져요. 발표회를 향해 으쌰으쌰."
     }
   ],
 
@@ -136,7 +154,7 @@ const CLASS_DATA = {
           id: 2,
           imgUrl: "./images/20104/20104_drawing 2.png",
           motivation: "♥",
-          story: "좋아하는 선생님이래요. 선생님 주변에 하트가 뿅뿅 그려져있어요."
+          story: "좋아하는 선생님이래요. 여기저기 하트가 뿅뿅!!."
         },
         {
           id: 3,
@@ -148,13 +166,13 @@ const CLASS_DATA = {
           id: 4,
           imgUrl: "./images/20104/20104_drawing 4.png",
           motivation: "★",
-          story: "파마머리를 한 친구네요. 정림이 마음 속 누가 있는걸까요~~?"
+          story: "파마머리를 한 친구는 누구일지 궁금하네요"
         },
         {
           id: 5,
           imgUrl: "./images/20104/20104_drawing 5.png",
           motivation: "엄마 아빠",
-          story: "정림이가 자주 말하는 단어 중에 하나입니다. 가족들과 다이소에서 쇼핑을 하나봐요."
+          story: "정림이가 '다이소'를 자주 말해요. 가족들과 다이소에서 쇼핑을 하나봐요."
         }
       ]
     },
@@ -178,7 +196,7 @@ const CLASS_DATA = {
           id: 2,
           imgUrl: "./images/20105/20105_drawing 2.png",
           motivation: "무시무시한 악마다. 리듬게임으로 랩배틀로 승부를 냇다",
-          story: "너무 귀여운 악마네요. 리듬 게임에 나오는 캐릭터라고 합니다."
+          story: "너무 귀여운 악마지요? 게임에 나오는 캐릭터라고 합니다."
         },
         {
           id: 3,
@@ -190,13 +208,13 @@ const CLASS_DATA = {
           id: 4,
           imgUrl: "./images/20105/20105_drawing 4.png",
           motivation: "리코더는 제일 좋아합니다 이를 리코짱! 뀨하",
-          story: "하음이는 좋아하는 물건에 항상 별명을 지어줍니다. \"내 리코짱 어디있지?\" 찾아헤맵니다. \"뀨하\"는 하음이의 부캐가 내는 귀여운 소리입니다."
+          story: "하음이는 좋아하는 물건에 항상 별명을 지어줍니다. \"내 리코짱 어디있지?\" 찾아헤매요. \"뀨하\"는 하음이의 부캐가 내는 귀여운 소리입니다."
         },
         {
           id: 5,
           imgUrl: "./images/20105/20105_drawing 5.png",
           motivation: "좋아하는 악기에요. 별명은 렐라짱!",
-          story: "점심시간, 쉬는시간 틈틈이 연습하기 바빠요. 연주할 수 있는 곡이 계속 늘어나요...(아기상어, 작은별, 곰세마리..)"
+          story: "점심시간, 쉬는시간 틈틈이 연습하기 바빠요. 연주할 수 있는 곡이 계속 늘어나요. (아기상어, 작은별, 곰세마리..)"
         },
         {
           id: 6,
@@ -368,7 +386,7 @@ const CLASS_DATA = {
       number: "20419",
       name: "김시훈",
       introKeyword: "꿈을 키우는 친구",
-      centerStudentImg: "./images/20419/20419_center student_nobg.png",
+      centerStudentImg: "./images/20419/20419_center student.png",
       centerNameImg: "./images/20419/20419_center name.png",
       bgColor: "#FAF8F5",
       drawings: [
