@@ -45,24 +45,6 @@ const CLASS_DATA = {
       title: "새로운 경험과 일상의 조화",
       url: "./images/cute version/group image 3.png",
       description: "4월 21일 청계천을 산책하며"
-    },
-    {
-      id: 4,
-      title: "소중한 추억을 나누는 시간",
-      url: "./images/cute version/group image 4.png",
-      description: "우리 반 친구들과 함께한 소중하고 즐거운 단체 추억"
-    },
-    {
-      id: 5,
-      title: "서로 도우며 성장하는 행복한 교실",
-      url: "./images/cute version/group image 5.png",
-      description: "서로를 응원하며 기쁨을 나누는 학급 활동에서"
-    },
-    {
-      id: 6,
-      title: "웃음꽃 피어나는 따뜻한 기억",
-      url: "./images/cute version/group image 6.png",
-      description: "언제나 마음에 남을 우리들의 따뜻한 단체 사진"
     }
   ],
 
@@ -70,7 +52,7 @@ const CLASS_DATA = {
   education: [
     {
       id: "baking",
-      title: "제과<br>제빵",
+      title: "제과제빵",
       icon: "🍞",
       badge: "실습",
       location: "상암고",
@@ -285,20 +267,20 @@ const CLASS_DATA = {
         {
           id: 1,
           imgUrl: "./images/20413/20413_drawing 1.PNG",
-          motivation: "좋아하는 명장면과 포근한 느낌을 펜으로 그리게 되었습니다.",
-          story: "깔끔하고 섬세한 펜 터치로 완성된 소중한 작품입니다."
+          motivation: "로미가 좋아서",
+          story: "티니핑을 좋아해요. 부끄럼도 많고 장난기도 많은 하나의 성격이 드러납니다"
         },
         {
           id: 2,
           imgUrl: "./images/20413/20413_drawing 2.png",
-          motivation: "일상 속 소소한 기쁨을 담아내고자 그렸습니다.",
-          story: "솔직하고 다정한 시선이 느껴지는 그림입니다."
+          motivation: "티니핑이 좋다",
+          story: "이번엔 빨간 색으로 그려봤어요. 그림을 그릴수록 보고 그리는 실력이 늘어나요."
         },
         {
           id: 3,
           imgUrl: "./images/20413/20413_drawing 3.png",
-          motivation: "디지털 기술과 나의 상상력을 결합하여 창작해낸 작품입니다.",
-          story: "풍부한 색감과 신비로운 감성이 조화롭게 어우러집니다."
+          motivation: "피카츄 그려다",
+          story: "귀여운 캐릭터를 좋아해요. 스티커, 비즈팔찌, 키링, 오리기 등 캐릭터가 들어간 다양한 작업을 취미로 합니다."
         }
       ]
     },
@@ -322,13 +304,13 @@ const CLASS_DATA = {
           id: 2,
           imgUrl: "./images/20616/20616_drawing 2.png",
           motivation: "피아노 좋아해요",
-          story: "음악을 좋아하는 건 알았지만 피아노를 좋아하는지 몰랐네요."
+          story: "음악을 참 좋아합니다. 동요, 캐롤, 가요 다양하게 들어요."
         },
         {
           id: 3,
           imgUrl: "./images/20616/20616_drawing 3.png",
-          motivation: "정성을 다해 완성한 나만의 세 번째 작품입니다.",
-          story: "마음을 담아 정성껏 완성한 소중한 손그림 작품입니다."
+          motivation: "배드민턴 수영 축구 탁구 좋아요.",
+          story: "어렸을 때부터 운동을 잘하고 좋아했다고 합니다."
         }
       ]
     },
@@ -345,38 +327,38 @@ const CLASS_DATA = {
         {
           id: 1,
           imgUrl: "./images/20625/20625_drawing 1.png",
-          motivation: "재미있고 엉뚱한 상상을 스케치북에 실현해보았습니다.",
-          story: "보는 이로 하여금 절로 미소 짓게 만드는 재치 만점 작품입니다."
+          motivation: "동물,곤충을 좋아한다"
+          story: "자연물에 관심이 많아요. 창문 밖을 지그시 관찰하는 걸 좋아해요."
         },
         {
           id: 2,
           imgUrl: "./images/20625/20625_drawing 2.png",
-          motivation: "좋아하는 요소들을 한데 모아 독창적인 그래픽으로 나타냈습니다.",
-          story: "개성이 톡톡 튀는 신선한 구도가 돋보입니다."
+          motivation: "운동을 좋아한다"
+          story: "열심히 운동해서 힘이 세지고 싶대요."
         },
         {
           id: 3,
           imgUrl: "./images/20625/20625_drawing 3.png",
-          motivation: "따뜻한 대화가 떠오르는 감성 공간을 그렸습니다.",
-          story: "편안하고 아늑함을 주는 아날로그 드로잉입니다."
+          motivation: "그림 그리는걸 좋아한다"
+          story: "홈페이지 첫 화면이 바로 예환이 작품입니다. 시키지 않았는데 친구들을 그리겠다고 했어요."
         },
         {
           id: 4,
           imgUrl: "./images/20625/20625_drawing 4.png",
-          motivation: "손끝으로 자유롭게 그린 경쾌한 무늬와 모양입니다.",
-          story: "자유로운 직관과 리듬감이 배어 있는 멋진 작품입니다."
+          motivation: "노래 부르는걸 좋아한다"
+          story: "적재 노래를 깜짝 놀랄 정도로 잘 부르더라고요. 감미로운 목소리의 소유자!! 도움반의 인기남!!"
         },
         {
           id: 5,
           imgUrl: "./images/20625/20625_drawing 5.png",
-          motivation: "마음속 깊은 곳 소원을 기원하며 작성한 손그림입니다.",
-          story: "진심 어린 소망과 정성이 느껴집니다."
+          motivation: "사진 찍는걸 좋아한다"
+          story: "사진에 관심이 많아요. 멋진 풍경 사진을 보면 기분이 좋아진대요."
         },
         {
           id: 6,
           imgUrl: "./images/20625/20625_drawing 6.png",
-          motivation: "대작 완성의 기쁨을 담아 정성껏 마감한 작품입니다.",
-          story: "풍부한 묘사와 깊이 있는 표현이 돋보이는 완성도 높은 그림입니다."
+          motivation: "웃긴걸 좋아한다"
+          story: "친한 친구, 동생이 기분이 안 좋을 때, 먼저 재치있게 말 걸어주고 기분을 풀어줘요."
         }
       ]
     },
@@ -386,7 +368,7 @@ const CLASS_DATA = {
       number: "20419",
       name: "김시훈",
       introKeyword: "꿈을 키우는 친구",
-      centerStudentImg: "./images/20419/20419_center student.png",
+      centerStudentImg: "./images/20419/20419_center student_nobg.png",
       centerNameImg: "./images/20419/20419_center name.png",
       bgColor: "#FAF8F5",
       drawings: [
