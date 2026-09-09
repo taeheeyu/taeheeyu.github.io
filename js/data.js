@@ -327,37 +327,37 @@ const CLASS_DATA = {
         {
           id: 1,
           imgUrl: "./images/20625/20625_drawing 1.png",
-          motivation: "동물,곤충을 좋아한다"
+          motivation: "동물,곤충을 좋아한다",
           story: "자연물에 관심이 많아요. 창문 밖을 지그시 관찰하는 걸 좋아해요."
         },
         {
           id: 2,
           imgUrl: "./images/20625/20625_drawing 2.png",
-          motivation: "운동을 좋아한다"
+          motivation: "운동을 좋아한다",
           story: "열심히 운동해서 힘이 세지고 싶대요."
         },
         {
           id: 3,
           imgUrl: "./images/20625/20625_drawing 3.png",
-          motivation: "그림 그리는걸 좋아한다"
+          motivation: "그림 그리는걸 좋아한다",
           story: "홈페이지 첫 화면이 바로 예환이 작품입니다. 시키지 않았는데 친구들을 그리겠다고 했어요."
         },
         {
           id: 4,
           imgUrl: "./images/20625/20625_drawing 4.png",
-          motivation: "노래 부르는걸 좋아한다"
+          motivation: "노래 부르는걸 좋아한다",
           story: "적재 노래를 깜짝 놀랄 정도로 잘 부르더라고요. 감미로운 목소리의 소유자!! 도움반의 인기남!!"
         },
         {
           id: 5,
           imgUrl: "./images/20625/20625_drawing 5.png",
-          motivation: "사진 찍는걸 좋아한다"
+          motivation: "사진 찍는걸 좋아한다",
           story: "사진에 관심이 많아요. 멋진 풍경 사진을 보면 기분이 좋아진대요."
         },
         {
           id: 6,
           imgUrl: "./images/20625/20625_drawing 6.png",
-          motivation: "웃긴걸 좋아한다"
+          motivation: "웃긴걸 좋아한다",
           story: "친한 친구, 동생이 기분이 안 좋을 때, 먼저 재치있게 말 걸어주고 기분을 풀어줘요."
         }
       ]
