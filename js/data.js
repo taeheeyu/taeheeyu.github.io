@@ -170,14 +170,14 @@ const CLASS_DATA = {
           title: "소중한 사람",
           imgUrl: "./images/20104/20104_drawing 3.png",
           motivation: "ㅑ호갸ㅔㅕ",
-          story: "또 좋아하는 선생님이에요"
+          story: "좋아하는 선생님이라고 합니다"
         },
         {
           id: 4,
           title: "파마머리 친구",
           imgUrl: "./images/20104/20104_drawing 4.png",
           motivation: "★",
-          story: "파마머리를 한 친구입니다"
+          story: "정림이 주변에 멋진 사람이 많네요"
         },
         {
           id: 5,
@@ -200,14 +200,14 @@ const CLASS_DATA = {
       drawings: [
         {
           id: 1,
-          title: "귀여운 난타",
+          title: "난타",
           imgUrl: "./images/20105/20105_drawing 1.png",
           motivation: "귀여운 난타. 스트레스가 쌓일 때 풀리는 악기",
           story: "오랫동안 복지관에서 난타를 쳐서 실력이 베테랑입니다."
         },
         {
           id: 2,
-          title: "귀여운 악마",
+          title: "프나펑",
           imgUrl: "./images/20105/20105_drawing 2.png",
           motivation: "무심무심한 악마다. 리듬게임으로 랩배틀로 승부를 냇다",
           story: "\"무시무시한 악마\"라고 합니다. 하지만 너무 귀여운 캐릭터지요?"
@@ -221,7 +221,7 @@ const CLASS_DATA = {
         },
         {
           id: 4,
-          title: "리코짱(리코더)",
+          title: "리코짱",
           imgUrl: "./images/20105/20105_drawing 4.png",
           motivation: "리코더는 제일 좋아합니다 이를 리코짱! 뀨하",
           story: "하음이는 좋아하는 물건에 항상 별명을 지어줍니다. \"내 리코짱 어디있지?\" 찾아헤매요. \"뀨하\"는 하음이의 부캐가 내는 귀여운 소리입니다."
@@ -235,7 +235,7 @@ const CLASS_DATA = {
         },
         {
           id: 6,
-          title: "음악과 리듬게임",
+          title: "태고의 달인",
           imgUrl: "./images/20105/20105_drawing 6.png",
           motivation: "가끔씩 스트레스가 생기면 유트부로 노래를 듣고 풀리다",
           story: "음악에 맞춰서 큰북을 두드리는 리듬게임이라고 합니다."
@@ -289,7 +289,7 @@ const CLASS_DATA = {
         },
         {
           id: 6,
-          title: "니코와 친구들",
+          title: "니코",
           imgUrl: "./images/20223/20223_drawing 6.png",
           motivation: "프리큐어와 함께 비너스의 대표하는 캐릭터이자 티비 애니메이션 시리즈(니코와 친구들)의 주인공이자 비너스의 최초 첫 캐릭터입니다. 상상한 캐릭터에요.",
           story: "화려한 전사 캐릭터가 아닌 귀여운 동물 캐릭터도 좋아한답니다~"
@@ -311,7 +311,7 @@ const CLASS_DATA = {
           title: "로미(티니핑)",
           imgUrl: "./images/20413/20413_drawing 1.PNG",
           motivation: "로미가 좋아서",
-          story: "티니핑을 좋아해요. 부끄럼도 많고 장난기도 많은 하나의 성격이 드러납니다"
+          story: "티니핑을 좋아해요. 부끄럼도 많고 장난기도 많은 하나와 닮았네요"
         },
         {
           id: 2,
@@ -374,36 +374,42 @@ const CLASS_DATA = {
       drawings: [
         {
           id: 1,
+          title: "동물과 곤충",
           imgUrl: "./images/20625/20625_drawing 1.png",
           motivation: "동물,곤충을 좋아한다",
           story: "자연물에 관심이 많아요. 창문 밖을 지그시 관찰하는 걸 좋아해요."
         },
         {
           id: 2,
+          title: "멋진 운동",
           imgUrl: "./images/20625/20625_drawing 2.png",
           motivation: "운동을 좋아한다",
           story: "열심히 운동해서 힘이 세지고 싶대요."
         },
         {
           id: 3,
+          title: "우리 반 친구들",
           imgUrl: "./images/20625/20625_drawing 3.png",
           motivation: "그림 그리는걸 좋아한다",
-          story: "홈페이지 첫 화면이 바로 예환이 작품입니다. 시키지 않았는데 친구들을 그리겠다고 했어요."
+          story: "홈페이지 첫 화면이 바로 예환이 작품입니다. 시키지 않았는데 먼저 친구들을 그리겠다고 했어요."
         },
         {
           id: 4,
+          title: "감미로운 노래",
           imgUrl: "./images/20625/20625_drawing 4.png",
           motivation: "노래 부르는걸 좋아한다",
           story: "적재 노래를 깜짝 놀랄 정도로 잘 부르더라고요. 감미로운 목소리의 소유자!! 도움반의 인기남!!"
         },
         {
           id: 5,
+          title: "풍경 사진",
           imgUrl: "./images/20625/20625_drawing 5.png",
           motivation: "사진 찍는걸 좋아한다",
           story: "사진에 관심이 많아요. 멋진 풍경 사진을 보면 기분이 좋아진대요."
         },
         {
           id: 6,
+          title: "재치있는 이야기",
           imgUrl: "./images/20625/20625_drawing 6.png",
           motivation: "웃긴걸 좋아한다",
           story: "친한 친구, 동생이 기분이 안 좋을 때, 먼저 재치있게 말 걸어주고 기분을 풀어줘요."
@@ -422,36 +428,42 @@ const CLASS_DATA = {
       drawings: [
         {
           id: 1,
+          title: "첫 번째 손그림",
           imgUrl: "./images/20419/20419_drawing 1.png",
           motivation: "정성을 다해 완성한 나만의 첫 번째 작품입니다.",
           story: "솔직한 표현과 맑은 감성이 돋보이는 소중한 손그림입니다."
         },
         {
           id: 2,
+          title: "두 번째 손그림",
           imgUrl: "./images/20419/20419_drawing 2.png",
           motivation: "정성을 다해 완성한 나만의 두 번째 작품입니다.",
           story: "자유로운 표현과 밝은 느낌이 담긴 손그림입니다."
         },
         {
           id: 3,
+          title: "세 번째 손그림",
           imgUrl: "./images/20419/20419_drawing 3.png",
           motivation: "정성을 다해 완성한 나만의 세 번째 작품입니다.",
           story: "새로운 시도와 따뜻한 마음이 담긴 손그림입니다."
         },
         {
           id: 4,
+          title: "네 번째 손그림",
           imgUrl: "./images/20419/20419_drawing 4.png",
           motivation: "정성을 다해 완성한 나만의 네 번째 작품입니다.",
           story: "개성이 돋보이는 소중한 손그림입니다."
         },
         {
           id: 5,
+          title: "다섯 번째 손그림",
           imgUrl: "./images/20419/20419_drawing 5.png",
           motivation: "정성을 다해 완성한 나만의 다섯 번째 작품입니다.",
           story: "정성 가득한 필치와 따뜻한 색감이 어우러진 작품입니다."
         },
         {
           id: 6,
+          title: "여섯 번째 손그림",
           imgUrl: "./images/20419/20419_drawing 6.png",
           motivation: "정성을 다해 완성한 나만의 여섯 번째 작품입니다.",
           story: "마음을 담아 정성껏 완성한 멋진 손그림입니다."
