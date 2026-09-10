@@ -99,12 +99,19 @@ function renderDrawings(student) {
     const targetCol = isLeft ? leftCol : rightCol;
     const rotateClass = rotateClasses[index % rotateClasses.length];
 
+    const savedTitleKey = `custom_title_${student.id}_${drawing.id}`;
+    const customTitle = localStorage.getItem(savedTitleKey);
+    const displayTitle = drawing.title || customTitle || `${index + 1}번째 작품`;
+
     const card = document.createElement('div');
     card.className = `postit-card pure-white ${rotateClass}`;
 
     card.innerHTML = `
       <div class="postit-img-wrapper">
         <img src="${drawing.imgUrl}" alt="${student.name} 손그림 ${index + 1}" class="postit-drawing-img" onerror="this.src='./images/template.png';">
+      </div>
+      <div class="postit-title-badge">
+        <span>✨ ${displayTitle}</span>
       </div>
     `;
 
