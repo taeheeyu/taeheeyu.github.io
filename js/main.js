@@ -62,7 +62,7 @@ function renderStudentSection() {
     return `
       <div class="student-card" onclick="location.href='student.html?id=${student.id}'" title="${student.name} 손그림 보러가기">
         <div class="student-card-top cute-bg">
-          <img src="${student.centerStudentImg}" alt="${student.name} 프로필" class="student-card-img" onerror="this.src='./images/template.png';">
+          <img src="${student.centerStudentImg}" alt="${student.name} 프로필" class="student-card-img" onerror="if(this.src.includes('_nobg.png')){this.src=this.src.replace('_nobg.png','.png');}else if(!this.src.includes('template.png')){this.src='./images/template.png';}">
         </div>
         <div class="student-card-body">
           ${nameMarkup}

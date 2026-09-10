@@ -45,6 +45,24 @@ const CLASS_DATA = {
       title: "새로운 경험과 일상의 조화",
       url: "./images/cute version/group image 3.png",
       description: "4월 21일 청계천을 산책하며"
+    },
+    {
+      id: 4,
+      title: "소중한 추억을 나누는 시간",
+      url: "./images/cute version/group image 4.png",
+      description: "5월 15일 서울랜드에서 한 컷!"
+    },
+    {
+      id: 5,
+      title: "서로 도우며 성장하는 행복한 교실",
+      url: "./images/cute version/group image 5.png",
+      description: "4월~7월 3개월간 컴퓨터실에서 다양한 기능을 익혔어요"
+    },
+    {
+      id: 6,
+      title: "웃음꽃 피어나는 따뜻한 기억",
+      url: "./images/cute version/group image 6.png",
+      description: "3월~6월 상암고에서 제과제빵 수업을 들었어요"
     }
   ],
 
@@ -113,6 +131,13 @@ const CLASS_DATA = {
       date: "2026-03-24",
       tag: "소식",
       summary: "서로 다른 음이 조화롭게 어우러져요. 발표회를 향해 으쌰으쌰."
+    },
+    {
+      id: "issue-4",
+      title: "컴퓨터 자격증(ITQ) 시험 🔔",
+      date: "2026-07-11",
+      tag: "소식",
+      summary: "3개월간 열심히 ITQ 시험 훈련한 결과 1명의 학생이 자격증을 취득했습니다. 축하해요!"
     }
   ],
 
@@ -142,13 +167,13 @@ const CLASS_DATA = {
           id: 3,
           imgUrl: "./images/20104/20104_drawing 3.png",
           motivation: "ㅑ호갸ㅔㅕ",
-          story: "누구일까? 좋아하는 친구? 가족? "
+          story: "또 좋아하는 선생님이에요"
         },
         {
           id: 4,
           imgUrl: "./images/20104/20104_drawing 4.png",
           motivation: "★",
-          story: "파마머리를 한 친구는 누구일지 궁금하네요"
+          story: "파마머리를 한 친구입니다"
         },
         {
           id: 5,
@@ -177,8 +202,8 @@ const CLASS_DATA = {
         {
           id: 2,
           imgUrl: "./images/20105/20105_drawing 2.png",
-          motivation: "무시무시한 악마다. 리듬게임으로 랩배틀로 승부를 냇다",
-          story: "너무 귀여운 악마지요? 게임에 나오는 캐릭터라고 합니다."
+          motivation: "무심무심한 악마다. 리듬게임으로 랩배틀로 승부를 냇다",
+          story: "\"무시무시한 악마\"라고 합니다. 하지만 너무 귀여운 캐릭터지요?"
         },
         {
           id: 3,
@@ -273,7 +298,7 @@ const CLASS_DATA = {
         {
           id: 2,
           imgUrl: "./images/20413/20413_drawing 2.png",
-          motivation: "티니핑이 좋다",
+          motivation: "티니핑이 좋아",
           story: "이번엔 빨간 색으로 그려봤어요. 그림을 그릴수록 보고 그리는 실력이 늘어나요."
         },
         {
@@ -368,7 +393,7 @@ const CLASS_DATA = {
       number: "20419",
       name: "김시훈",
       introKeyword: "꿈을 키우는 친구",
-      centerStudentImg: "./images/20419/20419_center student_nobg.png",
+      centerStudentImg: "./images/20419/20419_center student.png",
       centerNameImg: "./images/20419/20419_center name.png",
       bgColor: "#FAF8F5",
       drawings: [
