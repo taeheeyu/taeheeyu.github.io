@@ -326,6 +326,13 @@ const CLASS_DATA = {
           imgUrl: "./images/20413/20413_drawing 3.png",
           motivation: "피카츄 그려다",
           story: "귀여운 캐릭터를 좋아해요. 스티커, 비즈팔찌, 키링, 오리기 등 캐릭터가 들어간 다양한 작업을 취미로 합니다."
+        },
+        {
+          id: 4,
+          title: "네 번째 손그림",
+          imgUrl: "./images/20413/20413_drawing 4.png",
+          motivation: "정성을 다해 완성한 네 번째 작품입니다.",
+          story: "하나의 따뜻한 감성과 개성이 담긴 소중한 손그림입니다."
         }
       ]
     },
