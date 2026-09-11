@@ -331,7 +331,7 @@ const CLASS_DATA = {
           id: 4,
           title: "강아지",
           imgUrl: "./images/20413/20413_drawing 4.png",
-          motivation: "그리고 싶어서",
+          motivation: "그리고 시퍼서",
           story: "귀여운 강아지 그림을 보고 그렸습니다."
         }
       ]
