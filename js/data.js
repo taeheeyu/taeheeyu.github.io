@@ -326,13 +326,6 @@ const CLASS_DATA = {
           imgUrl: "./images/20413/20413_drawing 3.png",
           motivation: "피카츄 그려다",
           story: "귀여운 캐릭터를 좋아해요. 스티커, 비즈팔찌, 키링, 오리기 등 캐릭터가 들어간 다양한 작업을 취미로 합니다."
-        },
-        {
-          id: 4,
-          title: "네 번째 손그림",
-          imgUrl: "./images/20413/20413_drawing 4.png",
-          motivation: "정성을 다해 완성한 네 번째 작품입니다.",
-          story: "하나의 따뜻한 감성과 개성이 담긴 소중한 손그림입니다."
         }
       ]
     },
@@ -381,42 +374,42 @@ const CLASS_DATA = {
       drawings: [
         {
           id: 1,
-          title: "동물과 곤충",
+          title: "생물학자",
           imgUrl: "./images/20625/20625_drawing 1.png",
           motivation: "동물,곤충을 좋아한다",
           story: "자연물에 관심이 많아요. 창문 밖을 지그시 관찰하는 걸 좋아해요."
         },
         {
           id: 2,
-          title: "멋진 운동",
+          title: "운동선수",
           imgUrl: "./images/20625/20625_drawing 2.png",
           motivation: "운동을 좋아한다",
           story: "열심히 운동해서 힘이 세지고 싶대요."
         },
         {
           id: 3,
-          title: "우리 반 친구들",
+          title: "화가",
           imgUrl: "./images/20625/20625_drawing 3.png",
           motivation: "그림 그리는걸 좋아한다",
           story: "홈페이지 첫 화면이 바로 예환이 작품입니다. 시키지 않았는데 먼저 친구들을 그리겠다고 했어요."
         },
         {
           id: 4,
-          title: "감미로운 노래",
+          title: "가수",
           imgUrl: "./images/20625/20625_drawing 4.png",
           motivation: "노래 부르는걸 좋아한다",
           story: "적재 노래를 깜짝 놀랄 정도로 잘 부르더라고요. 감미로운 목소리의 소유자!! 도움반의 인기남!!"
         },
         {
           id: 5,
-          title: "풍경 사진",
+          title: "사진작가",
           imgUrl: "./images/20625/20625_drawing 5.png",
           motivation: "사진 찍는걸 좋아한다",
           story: "사진에 관심이 많아요. 멋진 풍경 사진을 보면 기분이 좋아진대요."
         },
         {
           id: 6,
-          title: "재치있는 이야기",
+          title: "개그맨",
           imgUrl: "./images/20625/20625_drawing 6.png",
           motivation: "웃긴걸 좋아한다",
           story: "친한 친구, 동생이 기분이 안 좋을 때, 먼저 재치있게 말 걸어주고 기분을 풀어줘요."
@@ -435,45 +428,45 @@ const CLASS_DATA = {
       drawings: [
         {
           id: 1,
-          title: "첫 번째 손그림",
+          title: "부자",
           imgUrl: "./images/20419/20419_drawing 1.png",
-          motivation: "정성을 다해 완성한 나만의 첫 번째 작품입니다.",
-          story: "솔직한 표현과 맑은 감성이 돋보이는 소중한 손그림입니다."
+          motivation: "부자가 되고 싶다",
+          story: "높은 아파트, 멋진 차를 갖고 돈을 쌓아두고 있는 엄청난 부자가 되고 싶대요."
         },
         {
           id: 2,
-          title: "두 번째 손그림",
+          title: "퍼즐",
           imgUrl: "./images/20419/20419_drawing 2.png",
-          motivation: "정성을 다해 완성한 나만의 두 번째 작품입니다.",
-          story: "자유로운 표현과 밝은 느낌이 담긴 손그림입니다."
+          motivation: "어려운 퍼즐",
+          story: "금속으로 만들어진 조각을 떼어냈다 조립했다 하는 퍼즐입니다. 동아리 시간에 열심히 했어요."
         },
         {
           id: 3,
-          title: "세 번째 손그림",
+          title: "보드게임",
           imgUrl: "./images/20419/20419_drawing 3.png",
-          motivation: "정성을 다해 완성한 나만의 세 번째 작품입니다.",
-          story: "새로운 시도와 따뜻한 마음이 담긴 손그림입니다."
+          motivation: "할리갈리",
+          story: "승부욕이 강합니다. 1등을 절대 놓칠 수 없어요."
         },
         {
           id: 4,
-          title: "네 번째 손그림",
+          title: "캐비어",
           imgUrl: "./images/20419/20419_drawing 4.png",
-          motivation: "정성을 다해 완성한 나만의 네 번째 작품입니다.",
-          story: "개성이 돋보이는 소중한 손그림입니다."
+          motivation: "먹고 싶다",
+          story: "뭘 먹고 싶냐고 물으면 항상 캐비어라고 합니다."
         },
         {
           id: 5,
-          title: "다섯 번째 손그림",
+          title: "핸드폰",
           imgUrl: "./images/20419/20419_drawing 5.png",
-          motivation: "정성을 다해 완성한 나만의 다섯 번째 작품입니다.",
-          story: "정성 가득한 필치와 따뜻한 색감이 어우러진 작품입니다."
+          motivation: "좋아한다",
+          story: "웹툰도 보고 게임 관련 영상을 많이 봅니다."
         },
         {
           id: 6,
-          title: "여섯 번째 손그림",
+          title: "멸망",
           imgUrl: "./images/20419/20419_drawing 6.png",
-          motivation: "정성을 다해 완성한 나만의 여섯 번째 작품입니다.",
-          story: "마음을 담아 정성껏 완성한 멋진 손그림입니다."
+          motivation: "지구가 멸망하기 5분 전",
+          story: "책상 위에 엎드려있는 학생을 찾아보세요. 학생 사진을 가지고 시훈이가 AI로 변형한 그림입니다. 사과에 입이 달리고 괴물과 공룡이 나타나는 주황색 하늘을 명령했어요."
         }
       ]
     }
