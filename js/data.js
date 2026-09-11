@@ -169,8 +169,8 @@ const CLASS_DATA = {
           id: 3,
           title: "소중한 사람",
           imgUrl: "./images/20104/20104_drawing 3.png",
-          motivation: "ㅑ호갸ㅔㅕ",
-          story: "좋아하는 선생님이라고 합니다"
+          motivation: "엄마",
+          story: "정림이가 가장 좋아하는 부모님이라고 합니다"
         },
         {
           id: 4,
@@ -308,10 +308,10 @@ const CLASS_DATA = {
       drawings: [
         {
           id: 1,
-          title: "로미(티니핑)",
+          title: "로미(하츄핑)",
           imgUrl: "./images/20413/20413_drawing 1.PNG",
           motivation: "로미가 좋아서",
-          story: "티니핑을 좋아해요. 부끄럼도 많고 장난기도 많은 하나와 닮았네요"
+          story: "하츄핑을 좋아해요. 부끄럼도 많고 장난기도 많은 하나와 닮았네요"
         },
         {
           id: 2,
@@ -326,6 +326,13 @@ const CLASS_DATA = {
           imgUrl: "./images/20413/20413_drawing 3.png",
           motivation: "피카츄 그려다",
           story: "귀여운 캐릭터를 좋아해요. 스티커, 비즈팔찌, 키링, 오리기 등 캐릭터가 들어간 다양한 작업을 취미로 합니다."
+        },
+        {
+          id: 4,
+          title: "강아지",
+          imgUrl: "./images/20413/20413_drawing 4.png",
+          motivation: "그리고 싶어서",
+          story: "귀여운 강아지 그림을 보고 그렸습니다."
         }
       ]
     },
@@ -466,7 +473,7 @@ const CLASS_DATA = {
           title: "멸망",
           imgUrl: "./images/20419/20419_drawing 6.png",
           motivation: "지구가 멸망하기 5분 전",
-          story: "책상 위에 엎드려있는 학생을 찾아보세요. 학생 사진을 가지고 시훈이가 AI로 변형한 그림입니다. 사과에 입이 달리고 괴물과 공룡이 나타나는 주황색 하늘을 명령했어요."
+          story: "책상 위에 엎드려있는 학생을 찾아보세요. 제시된 사진을 시훈이가 AI로 변형한 그림입니다. \"사과에 입을 달아줘, 거인, 공룡, 주황색 하늘\"을 명령했어요."
         }
       ]
     }

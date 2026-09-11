@@ -108,7 +108,7 @@ function renderDrawings(student) {
 
     card.innerHTML = `
       <div class="postit-img-wrapper">
-        <img src="${drawing.imgUrl}" alt="${student.name} 손그림 ${index + 1}" class="postit-drawing-img" onerror="this.src='./images/template.png';">
+        <img src="${drawing.imgUrl}" alt="${student.name} 손그림 ${index + 1}" class="postit-drawing-img" onerror="if(this.src.endsWith('.png')){this.src=this.src.replace('.png','.PNG');}else if(this.src.endsWith('.PNG')){this.src=this.src.replace('.PNG','.png');}else if(!this.src.includes('template.png')){this.src='./images/template.png';}">
       </div>
       <div class="postit-title-badge">
         <span>✨ ${displayTitle}</span>
