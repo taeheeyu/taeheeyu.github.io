@@ -9,12 +9,12 @@
 - **목표**: 6명의 학생 자기소개와 학급 교육 내용, 주요 이슈를 소개하는 감성적이고 반응형인 웹사이트 제작
 - **기술 스택**: HTML5, CSS3, Vanilla JavaScript (GitHub Pages 호스팅 가능 구조, 외부 프레임워크 최소화)
 - **대상 학생 (총 6명)**:
-  1. `20104` 김정림
-  2. `20105` 김하음
-  3. `20223` 정세헌
-  4. `20413` 임하나
-  5. `20616` 김성윤
-  6. `20625` 최예환
+  1. `student01` 김정림
+  2. `student02` 김하음
+  3. `student03` 정세헌
+  4. `student04` 임하나
+  5. `student06` 김성윤
+  6. `student07` 최예환
 
 ---
 
@@ -65,24 +65,24 @@
 파일 확장자 및 파일명 오타에 유연하게 대응할 수 있도록 자원 경로를 맵핑해야 합니다.
 
 ### 학생별 이미지 폴더 및 대응 학생:
-- `./images/20104/` (**김정림**)
-  - `20104_center name.jpg`, `20104_center student.png`
-  - `20104_drawing 1.png` ~ `20104_drawing 5.png`, `left-drawings.png`, `right-drawings.png`
-- `./images/20105/` (**김하음**)
-  - `20105_center name.png`, `20105_center student.png`
-  - `20105_drawing 1.png` ~ `20105_drawing 6.png`
-- `./images/20223/` (**정세헌**)
-  - `20223_center image.png`, `20223_center student.png`
-  - `20223_drawing 1.png` ~ `20223_drawing 6.png`
-- `./images/20413/` (**임하나**)
-  - `201413_center student.png` (파일명 오타 주의: 201413 → 20413 대응), `20413_center name.png`
-  - `20413_drawing 1.PNG`, `20413_drawing 2.jpg`, `ChatGPT Image...`
-- `./images/20616/` (**김성윤**)
-  - `20616_center name.png`, `20616_center student.jpg`
-  - `20616_drawing 1.png`, `20616_drawing 2.png`
-- `./images/20625/` (**최예환**)
-  - `20625_center  student.png` (공백 2개 오타 주의), `20625_center name.png`
-  - `20625_drawing 1.png` ~ `20625_drawing 6.png`
+- `./images/student01/` (**김정림**)
+  - `student01_center name.jpg`, `student01_center student.png`
+  - `student01_drawing 1.png` ~ `student01_drawing 5.png`, `left-drawings.png`, `right-drawings.png`
+- `./images/student02/` (**김하음**)
+  - `student02_center name.png`, `student02_center student.png`
+  - `student02_drawing 1.png` ~ `student02_drawing 6.png`
+- `./images/student03/` (**정세헌**)
+  - `student03_center image.png`, `student03_center student.png`
+  - `student03_drawing 1.png` ~ `student03_drawing 6.png`
+- `./images/student04/` (**임하나**)
+  - `student04_center student.png` (파일명 오타 주의: student04 → student04 대응), `student04_center name.png`
+  - `student04_drawing 1.PNG`, `student04_drawing 2.jpg`, `ChatGPT Image...`
+- `./images/student06/` (**김성윤**)
+  - `student06_center name.png`, `student06_center student.jpg`
+  - `student06_drawing 1.png`, `student06_drawing 2.png`
+- `./images/student07/` (**최예환**)
+  - `student07_center  student.png` (공백 2개 오타 주의), `student07_center name.png`
+  - `student07_drawing 1.png` ~ `student07_drawing 6.png`
 
 ---
 
@@ -128,12 +128,12 @@ const CLASS_DATA = {
     { title: "2026학년도 첫 학급 활동 발표", date: "2026-03-10", content: "우리 반 첫 번째 동아리 및 교육 활동이 시작되었습니다." }
   ],
   students: {
-    "20104": { name: "김정림", id: "20104", ... },
-    "20105": { name: "김하음", id: "20105", ... },
-    "20223": { name: "정세헌", id: "20223", ... },
-    "20413": { name: "임하나", id: "20413", ... },
-    "20616": { name: "김성윤", id: "20616", ... },
-    "20625": { name: "최예환", id: "20625", ... }
+    "student01": { name: "김정림", id: "student01", ... },
+    "student02": { name: "김하음", id: "student02", ... },
+    "student03": { name: "정세헌", id: "student03", ... },
+    "student04": { name: "임하나", id: "student04", ... },
+    "student06": { name: "김성윤", id: "student06", ... },
+    "student07": { name: "최예환", id: "student07", ... }
   }
 };
 ```

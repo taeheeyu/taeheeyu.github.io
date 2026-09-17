@@ -16,11 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let studentId = urlParams.get('id');
 
   if (!studentId || !CLASS_DATA.students[studentId]) {
-    if (studentId === '201419' && CLASS_DATA.students['20419']) {
-      studentId = '20419';
-    } else {
-      studentId = studentKeys[0];
-    }
+    studentId = studentKeys[0];
   }
 
   activeStudentId = studentId;
