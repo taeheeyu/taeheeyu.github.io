@@ -264,11 +264,11 @@ const CLASS_DATA = {
           title: "JSP 코믹스 히어로",
           imgUrl: "./images/student03/student03_drawing 2.png",
           motivation: "일본 최초의 여성 히어로이자 j.s.p 코믹스의 주인공입니다.",
-          story: "세헌이의 멋진 상상 속 슈퍼히어로 캐릭터입니다. j.s.p 코믹스라니...엄청난 세계관이 느껴지네요."
+          story: "J.S.P 는 Japan Studio Police 의 약자라고 합니다. 멋진 상상 속 경찰 캐릭터라고 해요. 엄청난 세계관이 느껴지네요."
         },
         {
           id: 3,
-          title: "좋아하는 음식",
+          title: "감자튀김",
           imgUrl: "./images/student03/student03_drawing 3.png",
           motivation: "제가 좋아하는 음식입니다.",
           story: "치킨과 더불어 세헌이의 최애 메뉴에요. 세헌이는 음식의 유래, 역사에 대해서도 아주 잘 알고 있답니다."
@@ -278,7 +278,7 @@ const CLASS_DATA = {
           title: "울트라 우먼",
           imgUrl: "./images/student03/student03_drawing 4.png",
           motivation: "일본 특촬물로 울트라 시리즈의 스핀오프 시리즈 입니다. 울트라맨에 등장한 울트라 우먼을 중심으로 이끌고 있습니다.",
-          story: "화려한 의상을 입고 정의를 위해 싸우는 캐릭터를 좋아하나봐요."
+          story: "화려한 의상을 입은 강인한 여성 캐릭터가 많군요."
         },
         {
           id: 5,
@@ -331,7 +331,7 @@ const CLASS_DATA = {
           id: 4,
           title: "강아지",
           imgUrl: "./images/student04/student04_drawing 4.png",
-          motivation: "그리고 시퍼서",
+          motivation: "그리고 싶어서",
           story: "귀여운 강아지 그림을 보고 그렸습니다."
         }
       ]
@@ -473,7 +473,7 @@ const CLASS_DATA = {
           title: "멸망",
           imgUrl: "./images/student05/student05_drawing 6.png",
           motivation: "지구가 멸망하기 5분 전",
-          story: "책상 위에 엎드려있는 학생을 찾아보세요. 제시된 사진을 시훈이가 AI로 변형한 그림입니다. \"사과에 입을 달아줘, 거인, 공룡, 주황색 하늘\"을 명령했어요."
+          story: "책상 위에 엎드려있는 학생을 찾아보세요. 주어진 사진을 AI로 변형한 그림입니다. \"사과에 입을 달아줘, 거인, 공룡, 주황색 하늘\"을 명령했어요."
         }
       ]
     }
