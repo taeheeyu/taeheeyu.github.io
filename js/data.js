@@ -429,7 +429,7 @@ const CLASS_DATA = {
       number: "5번",
       name: "김시훈",
       introKeyword: "꿈을 키우는 친구",
-      centerStudentImg: "./images/student05/student05_center student.png",
+      centerStudentImg: "./images/cute version/student05_center student cute.png",
       centerNameImg: "./images/student05/student05_center name.png",
       bgColor: "#FAF8F5",
       drawings: [
