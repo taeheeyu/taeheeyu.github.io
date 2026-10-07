@@ -46,7 +46,7 @@ function renderGroupGallerySection() {
   `).join('');
 }
 
-// 2. 학생 소개 섹션 렌더링 (손그림 보러가기 버튼 제거 & center name 크게 배치)
+// 2. 학생 소개 섹션 렌더링 ('손그림 보러가기' CTA 버튼 추가 & 명확한 클릭 유도)
 function renderStudentSection() {
   const container = document.getElementById('studentGridContainer');
   if (!container || !CLASS_DATA.students) return;
@@ -67,6 +67,9 @@ function renderStudentSection() {
         <div class="student-card-body">
           ${nameMarkup}
           <p class="student-keyword">${student.introKeyword || '꿈을 키우는 친구'}</p>
+          <div class="student-cta-btn">
+            <span>🎨 손그림 보러가기 ➔</span>
+          </div>
         </div>
       </div>
     `;
