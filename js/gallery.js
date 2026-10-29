@@ -48,19 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevId = currentPhoto.id > 1 ? currentPhoto.id - 1 : totalCount;
   const nextId = currentPhoto.id < totalCount ? currentPhoto.id + 1 : 1;
 
+  const sidePrevBtn = document.getElementById('sidePrevGalleryBtn');
+  const sideNextBtn = document.getElementById('sideNextGalleryBtn');
+  const sidePrevNum = document.getElementById('sidePrevGalleryNum');
+  const sideNextNum = document.getElementById('sideNextGalleryNum');
+
+  const goPrev = () => { window.location.href = `gallery.html?id=${prevId}`; };
+  const goNext = () => { window.location.href = `gallery.html?id=${nextId}`; };
+
   if (prevBtn) {
     prevBtn.innerHTML = `<span class="nav-btn-text">이전 추억</span><span class="nav-btn-icon">◀</span>`;
-    prevBtn.addEventListener('click', () => {
-      window.location.href = `gallery.html?id=${prevId}`;
-    });
+    prevBtn.addEventListener('click', goPrev);
   }
 
   if (nextBtn) {
     nextBtn.innerHTML = `<span class="nav-btn-text">다음 추억</span><span class="nav-btn-icon">▶</span>`;
-    nextBtn.addEventListener('click', () => {
-      window.location.href = `gallery.html?id=${nextId}`;
-    });
+    nextBtn.addEventListener('click', goNext);
   }
+
+  if (sidePrevNum) sidePrevNum.textContent = `#${prevId} 사진`;
+  if (sideNextNum) sideNextNum.textContent = `#${nextId} 사진`;
+  if (sidePrevBtn) sidePrevBtn.addEventListener('click', goPrev);
+  if (sideNextBtn) sideNextBtn.addEventListener('click', goNext);
 
   // 4. 키보드 단축키 지원 (좌/우 화살표: 이동, ESC: 메인으로)
   document.addEventListener('keydown', (e) => {

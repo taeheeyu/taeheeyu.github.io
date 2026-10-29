@@ -106,7 +106,8 @@ function renderDrawings(student) {
         <img src="${drawing.imgUrl}" alt="${student.name} 손그림 ${index + 1}" class="postit-drawing-img" onerror="if(this.src.endsWith('.png')){this.src=this.src.replace('.png','.PNG');}else if(this.src.endsWith('.PNG')){this.src=this.src.replace('.PNG','.png');}else if(!this.src.includes('template.png')){this.src='./images/template.png';}">
       </div>
       <div class="postit-title-badge">
-        <span>✨ ${displayTitle}</span>
+        <span class="badge-title">✨ ${displayTitle}</span>
+        <span class="badge-action">🔍 설명 보기</span>
       </div>
     `;
 
@@ -173,6 +174,8 @@ function openDrawingModal(studentId, studentName, drawing, fallbackTitle) {
   }
 
   modal.classList.add('active');
+  const modalContent = modal.querySelector('.modal-content');
+  if (modalContent) modalContent.scrollTop = 0;
   document.body.style.overflow = 'hidden';
 }
 
@@ -200,6 +203,10 @@ function setupModalEvents() {
 function setupNavigationButtons(currentId, studentKeys) {
   const prevBtn = document.getElementById('prevStudentBtn');
   const nextBtn = document.getElementById('nextStudentBtn');
+  const sidePrevBtn = document.getElementById('sidePrevStudentBtn');
+  const sideNextBtn = document.getElementById('sideNextStudentBtn');
+  const sidePrevName = document.getElementById('sidePrevStudentName');
+  const sideNextName = document.getElementById('sideNextStudentName');
 
   const currentIndex = studentKeys.indexOf(currentId);
   const prevIndex = (currentIndex - 1 + studentKeys.length) % studentKeys.length;
@@ -208,13 +215,28 @@ function setupNavigationButtons(currentId, studentKeys) {
   const prevStudent = CLASS_DATA.students[studentKeys[prevIndex]];
   const nextStudent = CLASS_DATA.students[studentKeys[nextIndex]];
 
+  const goPrev = () => { window.location.href = `student.html?id=${prevStudent.id}`; };
+  const goNext = () => { window.location.href = `student.html?id=${nextStudent.id}`; };
+
   if (prevBtn) {
     prevBtn.innerHTML = `<span class="nav-btn-text">${prevStudent.name}</span><span class="nav-btn-icon">◀</span>`;
-    prevBtn.onclick = () => window.location.href = `student.html?id=${prevStudent.id}`;
+    prevBtn.onclick = goPrev;
   }
 
   if (nextBtn) {
     nextBtn.innerHTML = `<span class="nav-btn-text">${nextStudent.name}</span><span class="nav-btn-icon">▶</span>`;
-    nextBtn.onclick = () => window.location.href = `student.html?id=${nextStudent.id}`;
+    nextBtn.onclick = goNext;
   }
+
+  if (sidePrevName) sidePrevName.textContent = prevStudent.name;
+  if (sideNextName) sideNextName.textContent = nextStudent.name;
+  if (sidePrevBtn) sidePrevBtn.onclick = goPrev;
+  if (sideNextBtn) sideNextBtn.onclick = goNext;
+
+  document.addEventListener('keydown', (e) => {
+    const modal = document.getElementById('drawingModal');
+    if (modal && modal.classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') goPrev();
+    else if (e.key === 'ArrowRight') goNext();
+  });
 }

@@ -30,6 +30,19 @@
     </div>
   </header>
 
+  <!-- Left / Right Side Floating Navigation Buttons -->
+  <button id="sidePrevStudentBtn" class="side-floating-nav prev-side-btn" title="이전 친구 보기">
+    <span class="side-nav-arrow">◀</span>
+    <span class="side-nav-label">이전 친구</span>
+    <span class="side-nav-sub" id="sidePrevStudentName"></span>
+  </button>
+
+  <button id="sideNextStudentBtn" class="side-floating-nav next-side-btn" title="다음 친구 보기">
+    <span class="side-nav-arrow">▶</span>
+    <span class="side-nav-label">다음 친구</span>
+    <span class="side-nav-sub" id="sideNextStudentName"></span>
+  </button>
+
   <!-- Main Stage Viewport Fit -->
   <main class="student-viewport">
     <div class="student-stage">
@@ -47,6 +60,9 @@
         </div>
         <div class="center-student-frame">
           <img id="centerStudentImg" src="" alt="학생 이미지" class="center-student-img">
+        </div>
+        <div class="drawing-click-guide">
+          <span>💡 각각의 손그림을 클릭하면 작품 설명을 볼 수 있어요!</span>
         </div>
       </div>
 
